@@ -21,7 +21,6 @@ const DEFAULT_DATA: LandingPageData = {
         ],
         cta: "Quiero Inscribirme Ahora",
         frictionRemover: "Inversión: 27 USD / 27000 ARS",
-        socialProof: "Únete a la comunidad de German y Pablo",
         videoUrl: "/assets/videos/workshop-video.mp4",
         mercadoPagoUrl: "https://mpago.la/2NQFYEi?ref=nevillegoddard.blog",
         paypalUrl: "https://www.paypal.com/ncp/payment/NFCE9GEV66TWU?ref=nevillegoddard.blog"

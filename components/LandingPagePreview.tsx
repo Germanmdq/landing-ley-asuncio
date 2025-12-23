@@ -94,26 +94,6 @@ const LandingPagePreview: React.FC<LandingPagePreviewProps> = ({ data, isMobile 
                   </button>
                 )}
               </div>
-              {s.content.socialProof && (
-                <div className="mt-12 pt-12 border-t border-slate-200 flex flex-col items-center">
-                  <div className="flex items-center -space-x-2 mb-3">
-                    {[
-                      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100",
-                      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100",
-                      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100",
-                      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
-                    ].map((url, i) => (
-                      <img
-                        key={i}
-                        src={url}
-                        alt={`User ${i + 1}`}
-                        className="w-10 h-10 rounded-full border-2 border-white object-cover"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-sm font-semibold text-slate-500">{s.content.socialProof}</p>
-                </div>
-              )}
             </div>
           </section>
         );
