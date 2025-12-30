@@ -5,7 +5,8 @@ import { Heart } from "lucide-react";
 // Mock data
 const favorites: Lecture[] = [
     {
-        lecture_id: "001",
+        id: "001",
+        type: 'lecture',
         title_es: "Tu Fe es Tu Fortuna",
         title_en: "Your Faith is Your Fortune",
         year: "1941",
@@ -26,7 +27,7 @@ export default function FavoritosPage() {
             {favorites.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {favorites.map((lecture) => (
-                        <LectureCard key={lecture.lecture_id} lecture={lecture} />
+                        <LectureCard key={lecture.id} lecture={lecture} />
                     ))}
                 </div>
             ) : (
