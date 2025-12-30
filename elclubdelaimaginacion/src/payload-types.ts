@@ -72,6 +72,7 @@ export interface Config {
     media: Media;
     categories: Category;
     users: User;
+    library: Library;
     redirects: Redirect;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -94,6 +95,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
+    library: LibrarySelect<false> | LibrarySelect<true>;
     redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
@@ -419,6 +421,7 @@ export interface Category {
 export interface User {
   id: number;
   name?: string | null;
+  tier: 'bronce' | 'plata' | 'oro';
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -781,6 +784,23 @@ export interface Form {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "library".
+ */
+export interface Library {
+  id: number;
+  title: string;
+  author: string;
+  type: 'audio' | 'video' | 'book' | 'text';
+  accessTier: 'bronce' | 'plata' | 'oro';
+  description?: string | null;
+  media?: (number | null) | Media;
+  externalLink?: string | null;
+  category?: (number | Category)[] | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -988,6 +1008,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'users';
         value: number | User;
+      } | null)
+    | ({
+        relationTo: 'library';
+        value: number | Library;
       } | null)
     | ({
         relationTo: 'redirects';
@@ -1337,6 +1361,7 @@ export interface CategoriesSelect<T extends boolean = true> {
  */
 export interface UsersSelect<T extends boolean = true> {
   name?: T;
+  tier?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
@@ -1353,6 +1378,22 @@ export interface UsersSelect<T extends boolean = true> {
         createdAt?: T;
         expiresAt?: T;
       };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "library_select".
+ */
+export interface LibrarySelect<T extends boolean = true> {
+  title?: T;
+  author?: T;
+  type?: T;
+  accessTier?: T;
+  description?: T;
+  media?: T;
+  externalLink?: T;
+  category?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
