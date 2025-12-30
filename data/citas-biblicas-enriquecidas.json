@@ -1,0 +1,70 @@
+[
+    {
+        "id": "gen-1-27",
+        "versiculo": "Génesis 1:27",
+        "texto_es": "Y creó Dios al hombre a su imagen, a imagen de Dios lo creó",
+        "texto_en": "So God created man in his own image, in the image of God he created him",
+        "strongNumbers": [
+            "H1254",
+            "H430",
+            "H6754"
+        ],
+        "palabrasClave": [
+            {
+                "palabra": "creó",
+                "strong": "H1254",
+                "hebreo": "בָּרָא (bara)",
+                "significado": "crear de la nada, hacer surgir",
+                "contextoNeville": "Tú CREAS tu realidad igual que Dios creó el mundo - desde tu imaginación"
+            },
+            {
+                "palabra": "Dios",
+                "strong": "H430",
+                "hebreo": "אֱלֹהִים (Elohim)",
+                "significado": "poder divino, fuerza creadora (plural de majestad)",
+                "contextoNeville": "Elohim es tu IMAGINACIÓN - el poder creador dentro tuyo"
+            },
+            {
+                "palabra": "imagen",
+                "strong": "H6754",
+                "hebreo": "צֶלֶם (tselem)",
+                "significado": "sombra, reflejo, representación visible de algo invisible",
+                "contextoNeville": "Tu imaginación es la 'imagen' o reflejo de Dios. No eres una copia inferior, ERES ese poder"
+            }
+        ],
+        "interpretacionNeville": "Neville enseña que 'creado a imagen de Dios' significa que tienes el MISMO poder creador que Dios - tu imaginación. Elohim (Dios) no es un ser externo, es tu propia conciencia imaginando.",
+        "conferencia": "La Imaginación Crea la Realidad",
+        "año": "1966",
+        "categoria": "Identidad Divina"
+    },
+    {
+        "id": "mar-11-24",
+        "versiculo": "Marcos 11:24",
+        "texto_es": "Por tanto, os digo que todo lo que pidiereis orando, creed que lo recibiréis, y os vendrá",
+        "texto_en": "Therefore I tell you, whatever you ask in prayer, believe that you have received it, and it will be yours",
+        "strongNumbers": [
+            "G4100",
+            "G2983"
+        ],
+        "palabrasClave": [
+            {
+                "palabra": "creed",
+                "strong": "G4100",
+                "griego": "πιστεύω (pisteuō)",
+                "significado": "tener fe absoluta, convicción profunda, no solo creer mentalmente",
+                "contextoNeville": "No es 'esperar que pase'. Es ASUMIR que ya pasó"
+            },
+            {
+                "palabra": "recibiréis",
+                "strong": "G2983",
+                "griego": "λαμβάνω (lambanō)",
+                "significado": "recibir, TOMAR posesión, agarrar (tiempo perfecto = acción completada)",
+                "contextoNeville": "HAVE RECEIVED = tiempo pasado. Ya lo tienes en imaginación = ya lo tienes en realidad"
+            }
+        ],
+        "interpretacionNeville": "Neville destaca el tiempo verbal: 'creed que lo RECIBIRÉIS' está mal traducido. El griego dice 'creed que lo RECIBISTEIS' (pasado). No pidas esperando, ASUME que ya lo tienes.",
+        "conferencia": "Entra en el Sueño",
+        "año": "1969",
+        "categoria": "Ley de la Asunción"
+    }
+]

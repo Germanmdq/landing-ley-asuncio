@@ -1,0 +1,782 @@
+{
+  "H1": {
+    "number": "H1",
+    "word": "אב",
+    "definition": "palabra prim.; padre en aplicación lit. e inmed., o fig., y remota:—abuelo, antepasado, descendencia, padre, paterno, x patrimonio, principal. Comp. nombres en «Abi».",
+    "transliteration": "ab"
+  },
+  "H2": {
+    "number": "H2",
+    "word": "אב",
+    "definition": "(cald.); corresp. a 1:—padre.",
+    "transliteration": "ab"
+  },
+  "H3": {
+    "number": "H3",
+    "word": "אב",
+    "definition": "del mismo como 24; planta verde:—fruto, verdor.",
+    "transliteration": "eb"
+  },
+  "H4": {
+    "number": "H4",
+    "word": "אב",
+    "definition": "(cald.); corresp. a 3:—fruto.",
+    "transliteration": "eb"
+  },
+  "H5": {
+    "number": "H5",
+    "word": "תאָגְבַאֲ",
+    "definition": "o por. orig.; Abagtá, eunuco de Jerjes:—Abagtá.",
+    "transliteration": "Abagtá"
+  },
+  "H6": {
+    "number": "H6",
+    "word": "בדַאָ",
+    "definition": "raíz prim.; prop. a descarriarse, es decir, perderse; por impl. perecer (caus. destruir):—acabar, alejar, arruinar, corromper, derribar, desaparecer, desbaratar, desfallecer, deshacer, destrucción, destruir, desvanecer, esparcir, exterminar, faltar, fenecer, hacer perecer, huida, infortunio, morir, perder, perdido, perecer, privar, raer.",
+    "transliteration": "abad"
+  },
+  "H7": {
+    "number": "H7",
+    "word": "בדַאֲ",
+    "definition": "(cald.): corresp. a 6:—matar, apartar, arruinar, dar, desaparecer, destrozar, destruir, perecer.",
+    "transliteration": "abad"
+  },
+  "H8": {
+    "number": "H8",
+    "word": "בדא",
+    "definition": "act. de part. de 6; (concr.) miserable o (abst.) destrucción:—perecer.",
+    "transliteration": "obed"
+  },
+  "H9": {
+    "number": "H9",
+    "word": "דהָבֵאֲ",
+    "definition": "de 6; concr. algo perdido; abst. destrucción, es decir, Hades:—cosa perdida, destruir, perder. Comp. 10.",
+    "transliteration": "abedá"
+  },
+  "H10": {
+    "number": "H10",
+    "word": "הבדַאֲ",
+    "definition": "lo mismo que 9, escrito erradamente por 11; perecer:—destrucción.",
+    "transliteration": "abaddó"
+  },
+  "H11": {
+    "number": "H11",
+    "word": "בדּוֹן",
+    "definition": "intens. de 6; abst. perecer; concr. Hades:—Abadón.",
+    "transliteration": "abaddón"
+  },
+  "H12": {
+    "number": "H12",
+    "word": "דוּבְ אַ",
+    "definition": "de 6; perecer:—destrucción.",
+    "transliteration": "abdán"
+  },
+  "H13": {
+    "number": "H13",
+    "word": "דוּבְ אָ",
+    "definition": "de 6; perecer:—destrucción.",
+    "transliteration": "obdán"
+  },
+  "H14": {
+    "number": "H14",
+    "word": "בהָאָ",
+    "definition": "raíz prim.; respirar con, es decir (fig.) mostrar asentimiento:—querer, hacer (lo que te pide), consentir.",
+    "transliteration": "abá"
+  },
+  "H15": {
+    "number": "H15",
+    "word": "בהֶאָ",
+    "definition": "de 14; anhelar:—desear, deseo.",
+    "transliteration": "abé"
+  },
+  "H16": {
+    "number": "H16",
+    "word": "בהֶאֵ",
+    "definition": "de 14 (en el sentido de inclinarse hacia); papiro:—veloz.",
+    "transliteration": "ebé"
+  },
+  "H17": {
+    "number": "H17",
+    "word": "אבי",
+    "definition": "de 14 (en el sentido de desear); querer:—dolor.",
+    "transliteration": "aboi"
+  },
+  "H18": {
+    "number": "H18",
+    "word": "אבו",
+    "definition": "de 75; pesebrera o establo:—granero, pesebre.",
+    "transliteration": "ebús"
+  },
+  "H19": {
+    "number": "H19",
+    "word": "חהָבְ אִ",
+    "definition": "de una raíz que no se usa (apar. sign. voltear); blandir una espada:—espanto.",
+    "transliteration": "ibkjá"
+  },
+  "H20": {
+    "number": "H20",
+    "word": "יחַ טִ בַאֲ",
+    "definition": "de der. incier.; melón (solo plur.):—melón.",
+    "transliteration": "abatiakj"
+  },
+  "H21": {
+    "number": "H21",
+    "word": "בי אֲ",
+    "definition": "de 1; paternal; Abí, madre de Ezequías:—Abí.",
+    "transliteration": "Abí"
+  },
+  "H22": {
+    "number": "H22",
+    "word": "יאלֵב אֲ",
+    "definition": "de 1 y 410; padre (es decir, poseedor) de Dios; Abiel, nombre de dos isr.:—Abiel.",
+    "transliteration": "Abiel"
+  },
+  "H23": {
+    "number": "H23",
+    "word": "ספִיאָ בִ אֲ",
+    "definition": "de 1 y 622, padre de asamblea (i.e. segador); Abiasaf, un isr.:—Abiasaf.",
+    "transliteration": "Abiasaf"
+  },
+  "H24": {
+    "number": "H24",
+    "word": "ביב אָ",
+    "definition": "de una raíz que no se usa (que sign. ser tierno); verde, i.e. una espiga joven de grano; de aquí, nombre del mes Abib o Nisán:—espiga, espigada, grano, Abib.",
+    "transliteration": "abib"
+  },
+  "H25": {
+    "number": "H25",
+    "word": "בעוֹןגֶ בי אֲ",
+    "definition": "de 1 y 1391; padre (i.e. fundador) de Gibón; padre de Gibón, tal vez un isr.:—padre de Gabaón.",
+    "transliteration": "Abí Gibon"
+  },
+  "H26": {
+    "number": "H26",
+    "word": "יגל בִאֲ",
+    "definition": "de 1 y 1524; padre (fuente) de gozo; Abigail o Abigal, nombre de dos mujeres isr.:—Abigail.",
+    "transliteration": "Abigal"
+  },
+  "H27": {
+    "number": "H27",
+    "word": "ידן בִ אֲ",
+    "definition": "de 1 y 1777; padre de juicio (juez); Abidán, un isr.:—Abidán.",
+    "transliteration": "Abidán"
+  },
+  "H28": {
+    "number": "H28",
+    "word": "ידע בִ אֲ",
+    "definition": "de 1 y 3045; padre de conocimiento (i.e. conocer); Abidá, un hijo de Abraham y Cetura:—Abidá.",
+    "transliteration": "Abida"
+  },
+  "H29": {
+    "number": "H29",
+    "word": "א בָה",
+    "definition": "prol o; Abiyá; de 1 y de una raíz que no se usa de der. inc.; probablemente padre de fuerza (i.e. valiente); Abi Albón, un isr.:—Abi-Albón.",
+    "transliteration": "Abiyá"
+  },
+  "H30": {
+    "number": "H30",
+    "word": "ביהוּא אֲ",
+    "definition": "de 1 y 1931; padre (i.e. adorador) de Él (Dios); Abijú, un hijo de Aarón:—Abiú.",
+    "transliteration": "Abijú"
+  },
+  "H31": {
+    "number": "H31",
+    "word": "ביהוּד אֲ",
+    "definition": "de 1 y 1935; padre (i.e. poseedor) de renombre; Abijud, nombre de dos isr.:—Abiud.",
+    "transliteration": "Abijud"
+  },
+  "H32": {
+    "number": "H32",
+    "word": "ילִיחַ בִ אֲ",
+    "definition": "de 1 y 2428; padre (i.e. poseedor) de poder; Abikjail nombre de tres hombres y dos mujeres isr.:—Abihail.",
+    "transliteration": "Abikjail"
+  },
+  "H33": {
+    "number": "H33",
+    "word": "רַיִזְעֶהָ בִי אֲ",
+    "definition": "de 44 con el art. ins.; padre de Ezrita; abiezerita o desc. de Abiezer:—abiezerita.",
+    "transliteration": "abí jaEzerí"
+  },
+  "H34": {
+    "number": "H34",
+    "word": "ביוֹן אֶ",
+    "definition": "de 14, en el sentido de desear (especialmente en sentimiento); indigente:—mendigo, menestroso, necesitado, pobre.",
+    "transliteration": "ebión"
+  },
+  "H35": {
+    "number": "H35",
+    "word": "יונה ב א",
+    "definition": "de 14; provocador de deseo; la baya de alcaparra (por su sabor estimulante):—apetito.",
+    "transliteration": "abiyoná"
+  },
+  "H36": {
+    "number": "H36",
+    "word": "ביטוּב אֲ",
+    "definition": "de 1 y 2898; padre de bondad (i.e. bien); Abitub, un isr.:—Abitob.",
+    "transliteration": "Abitub"
+  },
+  "H37": {
+    "number": "H37",
+    "word": "יטל ב אֲ",
+    "definition": "de 1 y 2919; padre de rocío (i.e. frescura); Abital, una esposa del rey David:—Abital.",
+    "transliteration": "Abital"
+  },
+  "H38": {
+    "number": "H38",
+    "word": "יחָבִ אֲ",
+    "definition": "de 1 y 3220; padre de (el) mar (i.e. hombre de mar); Abiyam (o Abiá), un rey de Judá:—Abiam.",
+    "transliteration": "Abiyam"
+  },
+  "H39": {
+    "number": "H39",
+    "word": "אלֵימָ בִ אֲ",
+    "definition": "de 1 y de alguna otra palabra que no se usa (probablemente extranjera); padre de Mael (apar. tribu árabe); Abimael, un hijo de Joktan:—Abimael.",
+    "transliteration": "Abimael"
+  },
+  "H40": {
+    "number": "H40",
+    "word": "וְלֵימֶ בִ אֲ",
+    "definition": "de 1 y 4428; padre de (el) rey; Abimelec, nombre de dos reyes filisteos y de dos isr.:—Abimelec.",
+    "transliteration": "Abimélek"
+  },
+  "H41": {
+    "number": "H41",
+    "word": "דבָינָ בִ אֲ",
+    "definition": "de 1 y 5068; padre de generosidad (i.e. dadivoso); Abinadab, nombre de cuatro isr.:—Abinadad.",
+    "transliteration": "Abinadab"
+  },
+  "H42": {
+    "number": "H42",
+    "word": "עםיוֹ בִ אֲ",
+    "definition": "de 1 y 5278; padre de agrado (i.e. amable); Abinoam, un isr.:—Abinoam.",
+    "transliteration": "Abinoam"
+  },
+  "H43": {
+    "number": "H43",
+    "word": "סיָבְ אֶ",
+    "definition": "contr. de 23; Ebiasaf, un isr.:—Ebiasaf.",
+    "transliteration": "Ebiasaf"
+  },
+  "H44": {
+    "number": "H44",
+    "word": "זרִיעֶ בִ אֲ",
+    "definition": "de 1 y 5829; padre de ayuda (i.e. útil); Abiezer, nombre de dos isr.:—Abiezer.",
+    "transliteration": "Abiezer"
+  },
+  "H45": {
+    "number": "H45",
+    "word": "לבוֹןיְ־ע בִ אֲ",
+    "definition": "de 1 y de una raíz que no se usa de der. inc.; probablemente padre de fuerza (i.e. valiente); Abi Albón, un isr.:—Abi-Albón.",
+    "transliteration": "Abí Albón"
+  },
+  "H46": {
+    "number": "H46",
+    "word": "ביר א",
+    "definition": "de 82; poderoso (hablado de Dios):—fuerte, poderoso.",
+    "transliteration": "abir"
+  },
+  "H47": {
+    "number": "H47",
+    "word": "בּיר אַ",
+    "definition": "de 46:—caballo, corcel, duro, fortaleza, fuerte, noble, novillo, poderoso, principal, toro, valiente.",
+    "transliteration": "abbir"
+  },
+  "H48": {
+    "number": "H48",
+    "word": "ירם ב אֲ",
+    "definition": "de 1 y 7311; padre de altura (i.e. alto); Abiram, nombre de dos isr.:—Abiram.",
+    "transliteration": "Abiram"
+  },
+  "H49": {
+    "number": "H49",
+    "word": "ישׁ בִאֲ",
+    "definition": "de 1 y 7686; padre de error (i.e. desacierto); Abisag, una concubina de David:—Abisag.",
+    "transliteration": "Abishag"
+  },
+  "H50": {
+    "number": "H50",
+    "word": "ישׁוּע בִּאֲ",
+    "definition": "de 1 y 7771; padre de plenitud (i.e. próspero); Abishúa, nombre de dos isr.:—Abisúa.",
+    "transliteration": "Abishúa"
+  },
+  "H51": {
+    "number": "H51",
+    "word": "בישׁוּר אֲ",
+    "definition": "de 1 y 7791; padre de (el) muro (i.e. tal vez mampostero); Abishur, un isr.:—Abisur.",
+    "transliteration": "Abishur"
+  },
+  "H52": {
+    "number": "H52",
+    "word": "שִׁי בְ אַ",
+    "definition": "de 1 y 7862; padre de obsequio (i.e. prob., generoso); Abishai, un isr.:—Abisai.",
+    "transliteration": "Abshai"
+  },
+  "H53": {
+    "number": "H53",
+    "word": "שׁלוֹם בְ אַ",
+    "definition": "de 1 y 7965; padre de paz (i.e. amigable); Abshalom, un hijo de David; también (en su forma más larga) un isr. de los últimos tiempos:—Abisalom, Absalón.",
+    "transliteration": "Abshalom"
+  },
+  "H54": {
+    "number": "H54",
+    "word": "תרְיָבְ אֶ",
+    "definition": "contr. de 1 y 3498; padre de abundancia (i.e. dadivoso); Ebiatar, un isr.:—Abiatar.",
+    "transliteration": "Ebiatar"
+  },
+  "H55": {
+    "number": "H55",
+    "word": "וְבַאָ",
+    "definition": "raíz prim.; probablemente enrollar hacia arriba:—alzar.",
+    "transliteration": "abák"
+  },
+  "H56": {
+    "number": "H56",
+    "word": "בלַאָ",
+    "definition": "raíz prim.; lamentar:—afligir, destruir, duelo, enlutar, entristecer, gemir, hacer duelo, lamentar, llorar, luto.",
+    "transliteration": "abal"
+  },
+  "H57": {
+    "number": "H57",
+    "word": "בלֵאָ",
+    "definition": "de 56; dolerse:—afligir, apesadumbra, renlutado, enlutar, llorar, luto.",
+    "transliteration": "abel"
+  },
+  "H58": {
+    "number": "H58",
+    "word": "בלֵאָ",
+    "definition": "de una raíz que no se usa (sign. estar cubierto de hierba); pradera:—Vega. Comp. también nombres propios que empiezan con Abel-.",
+    "transliteration": "abel"
+  },
+  "H59": {
+    "number": "H59",
+    "word": "בלֵאָ",
+    "definition": "de 58; pradera; Abel, nombre de dos lugares en Pal.:—Abel.",
+    "transliteration": "Abel"
+  },
+  "H60": {
+    "number": "H60",
+    "word": "בלָאֵ",
+    "definition": "de 56; lamento:—duelo, lamento, llanto, lloro, luto.",
+    "transliteration": "ebel"
+  },
+  "H61": {
+    "number": "H61",
+    "word": "בלָאֲ",
+    "definition": "apar. de 56 mediante la idea de negación; no (i.e. verdaderamente o todavía):—verdad, verdaderamente.",
+    "transliteration": "abal"
+  },
+  "H62": {
+    "number": "H62",
+    "word": "כהָעֵית־מ בֵּ בלֵאָ",
+    "definition": "de 58 y 1004 y 4601; pradera de Bet Maaka; Abel Bet Maaká, un lugar en Pal.:—Abel-bet-maaca.",
+    "transliteration": "Abel Bet Maaká"
+  },
+  "H63": {
+    "number": "H63",
+    "word": "טיסְ שִׁ הַ בֹלֵאָ",
+    "definition": "de 58 y del plur. de 7848, con el art. ins.; pradera de las acacias; Abel Sitim, un lugar en Pal.:—Abel-sitim.",
+    "transliteration": "Abel jaShittim"
+  },
+  "H64": {
+    "number": "H64",
+    "word": "מים רָכְּ בלֵאָ",
+    "definition": "de 58 y del plur. de 3754; pradera de viñedos, un lugar en Pal.:—pradera de viñedos, Vega de las viñas.",
+    "transliteration": "Abel Keramim"
+  },
+  "H65": {
+    "number": "H65",
+    "word": "חוֹלהָ מְ בלֵאָ",
+    "definition": "de 58 y 4246; pradera de danza, Abel Mehola, un lugar en Pal.:—Abel mehola.",
+    "transliteration": "Abel Mekjolá"
+  },
+  "H66": {
+    "number": "H66",
+    "word": "יסְמַ בלֵאַ",
+    "definition": "de 58 y 4325; pradera de agua, Abel Maim, un lugar en Pal.:—Abel-maim.",
+    "transliteration": "Abel Mayim"
+  },
+  "H67": {
+    "number": "H67",
+    "word": "יסְרַצְ מִ בלֵאָ",
+    "definition": "de 58 y 4714; pradera de Egipto, Abel Mizraim, un lugar en Pal.:—Abel mizraim.",
+    "transliteration": "Abel Mitsraim"
+  },
+  "H68": {
+    "number": "H68",
+    "word": "בן",
+    "definition": "de la raíz de 1129 mediante el sign. de construir; piedra:—cantería, honda, masa, pedregoso, pedrería, peña, pesa, peso, piedra, plomada, roca.",
+    "transliteration": "eben"
+  },
+  "H69": {
+    "number": "H69",
+    "word": "בן",
+    "definition": "(cald.); corresp. a 68:—piedra.",
+    "transliteration": "eben"
+  },
+  "H70": {
+    "number": "H70",
+    "word": "בא",
+    "definition": "de lo mismo que 68; par de piedras (solo dual); rueda de alfarero o taburete de partera (ambos consistentes de dos discos horizontales con un apoyo en el centro):—rueda.",
+    "transliteration": "oben"
+  },
+  "H71": {
+    "number": "H71",
+    "word": "נהָבָאֲ",
+    "definition": "tal vez fem. of 68; pedregoso; Abaná, río cerca de Damasco:—Abana.",
+    "transliteration": "Abaná"
+  },
+  "H72": {
+    "number": "H72",
+    "word": "זרְעֵהָ וְאֶ",
+    "definition": "de 68 y 5828 con el art. ins.; roca de ayuda; Eben Ezer, un lugar en Pal.:—Eben ezer.",
+    "transliteration": "Eben jaézer"
+  },
+  "H73": {
+    "number": "H73",
+    "word": "נטֵבְ אַ",
+    "definition": "de der. inc; cinturón:—cinto, cinturón, talabarte.",
+    "transliteration": "abnet"
+  },
+  "H74": {
+    "number": "H74",
+    "word": "ינרַ בִאֲ",
+    "definition": "de 1 y 5216; padre de luz (i.e. iluminante); Abiner, un isr.:—Abner.",
+    "transliteration": "Abiner"
+  },
+  "H75": {
+    "number": "H75",
+    "word": "בסַאָ",
+    "definition": "raíz prim.; alimentar con forraje:—engordar, gordo.",
+    "transliteration": "abás"
+  },
+  "H76": {
+    "number": "H76",
+    "word": "עהָבֶּעְ בַאֲ",
+    "definition": "(por redup.) de una raíz que no se usa (que sign. salir); pústula inflamatoria (como erupción):—sarpullido, úlcera.",
+    "transliteration": "ababbúa"
+  },
+  "H77": {
+    "number": "H77",
+    "word": "בצְאֶ",
+    "definition": "de una raíz que no se usa que prob. sign. destellar; conspicuo; Ebets; un lugar en Pal.:—Abez.",
+    "transliteration": "Ebets"
+  },
+  "H78": {
+    "number": "H78",
+    "word": "בצָן",
+    "definition": "de lo mismo que 76; espléndido; Ibtsán; un isr.:—Ibzán.",
+    "transliteration": "Ibtsán"
+  },
+  "H79": {
+    "number": "H79",
+    "word": "בא",
+    "definition": "raíz prim., prob. irse flotando (como vapor), pero que se usa solo como denom. de 80; agarrar, i.e. luchar cuerpo a cuerpo:—luchar.",
+    "transliteration": "abak"
+  },
+  "H80": {
+    "number": "H80",
+    "word": "בא",
+    "definition": "de la raíz de 79; partículas ligeras (como volátiles):—polvo.",
+    "transliteration": "abak"
+  },
+  "H81": {
+    "number": "H81",
+    "word": "קהָבָאֲ",
+    "definition": "fem. de 80:—polvo.",
+    "transliteration": "abaká"
+  },
+  "H82": {
+    "number": "H82",
+    "word": "ברַאָ",
+    "definition": "raíz prim.; elevarse:—volar.",
+    "transliteration": "ábar"
+  },
+  "H83": {
+    "number": "H83",
+    "word": "ברָאֵ",
+    "definition": "de 82, extremo del ala:—miembro, ala.",
+    "transliteration": "éber"
+  },
+  "H84": {
+    "number": "H84",
+    "word": "רהָבְ אֶ",
+    "definition": "fem. de 83:—pluma.",
+    "transliteration": "ebrá"
+  },
+  "H85": {
+    "number": "H85",
+    "word": "הסָרָבְ אַ",
+    "definition": "contr. de 1 y una raíz que no se usa (prob. sign. ser muy poblado); padre de multitud; Abrajam, nombre posterior de Abram:—Abraham.",
+    "transliteration": "Abrajam"
+  },
+  "H86": {
+    "number": "H86",
+    "word": "וְרֵבְ אַ",
+    "definition": "prob. palabra eg. que sign. arrodillarse:—doblar la rodilla.",
+    "transliteration": "abrek"
+  },
+  "H87": {
+    "number": "H87",
+    "word": "רסָבְ אַ",
+    "definition": "contr. de 48; padre enaltecido; Abram, nombre original de Abraham:—Abram.",
+    "transliteration": "Abram"
+  },
+  "H88": {
+    "number": "H88",
+    "word": "בוֹת",
+    "definition": "plur. de 178; odres para agua; Obot, un lugar en el desierto:—Obot.",
+    "transliteration": "Obot"
+  },
+  "H89": {
+    "number": "H89",
+    "word": "גאַאָ",
+    "definition": "de der. inc. [comp. 90]; Ague, un isr.:—Age.",
+    "transliteration": "Agué"
+  },
+  "H90": {
+    "number": "H90",
+    "word": "גָאֲ",
+    "definition": "de der. inc. [comp. 89]; llama; Agag, un título de los reyes amalecitas:—Agag.",
+    "transliteration": "Agág"
+  },
+  "H91": {
+    "number": "H91",
+    "word": "גיִגָאֲ",
+    "definition": "gent. o patron. de 90; agagueo o desc. (súbdito) de Agag:—agagueo.",
+    "transliteration": "Agaguí"
+  },
+  "H92": {
+    "number": "H92",
+    "word": "דּהָגַאֲ",
+    "definition": "forma fem. del part. pas. de una raíz que no se usa (que sign. atar); banda, haz, nudo, o arco:—carga, ejército, expansión, manojo.",
+    "transliteration": "aguddá"
+  },
+  "H93": {
+    "number": "H93",
+    "word": "אגוֹזֶ",
+    "definition": "prob. de or. persa; nuez:—nuez, nogal.",
+    "transliteration": "egóz"
+  },
+  "H94": {
+    "number": "H94",
+    "word": "אגוּרָ",
+    "definition": "part. pas. de 103; reunidos (i.e. recibidos entre los sabios); Agur, nombre elegante de Salomón:—Agur.",
+    "transliteration": "Agur"
+  },
+  "H95": {
+    "number": "H95",
+    "word": "גוֹרהָ אֲ",
+    "definition": "de lo mismo que 94; prop. algo reunido, i.e. tal vez grano o frutilla; que se usa solo de una pequeña moneda (de plata):—moneda.",
+    "transliteration": "agorá"
+  },
+  "H96": {
+    "number": "H96",
+    "word": "גלֶאֶ",
+    "definition": "de una raíz que no se usa (que sign. fluir hacia abajo o como gotas); reserva:—gota.",
+    "transliteration": "éguel"
+  },
+  "H97": {
+    "number": "H97",
+    "word": "יסְלַגְאֶ",
+    "definition": "dual de 96; estanque doble; Eglaim, un lugar en Moab:—Eglaim.",
+    "transliteration": "Eglaim"
+  },
+  "H98": {
+    "number": "H98",
+    "word": "גסַאֲ",
+    "definition": "de una raíz que no se usa (que sign. recolectar como agua); pantano; de aquí, torrente (como creciendo de una ciénaga); de aquí, cerca de caña:—estanque, laguna, foso, pozo.",
+    "transliteration": "ágam"
+  },
+  "H99": {
+    "number": "H99",
+    "word": "גסֵאָ",
+    "definition": "prob. de lo mismo que 98 (en el sentido de agua estancada); fig. triste:—vivero.",
+    "transliteration": "águem"
+  },
+  "H100": {
+    "number": "H100",
+    "word": "גמוֹןאֲ",
+    "definition": "de lo mismo que 98; estanque pantanoso [otras de una raíz diferente, olla]; por impl. torrente (como creciendo allí); colect. cuerda de juncos:—caldero, caña, garfio, junco.",
+    "transliteration": "agmón"
+  },
+  "H101": {
+    "number": "H101",
+    "word": "ג aggán",
+    "definition": "prob. de 5059; tazón (como golpeado hasta darle forma cóncava):—taza.",
+    "transliteration": "aggán"
+  },
+  "H102": {
+    "number": "H102",
+    "word": "גּרָאַ",
+    "definition": "prob. de 5062 (mediante la idea de inminente); cubierta o montón; i.e. (solo plur.) alas de un ejército, o multitudes de tropas:—tropa.",
+    "transliteration": "aggáf"
+  },
+  "H103": {
+    "number": "H103",
+    "word": "גרַאָ",
+    "definition": "raíz prim.; cosechar:—recoger.",
+    "transliteration": "agar"
+  },
+  "H104": {
+    "number": "H104",
+    "word": "ראָגְאַ",
+    "definition": "(cald.); de or. persa; epístola (llevada por un cartero o mensajero del estado):—carta.",
+    "transliteration": "iggrá"
+  },
+  "H105": {
+    "number": "H105",
+    "word": "טלָרְגַאֲ",
+    "definition": "de der. inc.; vasija:—tazón.",
+    "transliteration": "agartal"
+  },
+  "H106": {
+    "number": "H106",
+    "word": "גרְאֶ",
+    "definition": "de 1640 (en el sentido de tomar ansiosamente); mano echa puño cerrado:—puño.",
+    "transliteration": "egrof"
+  },
+  "H107": {
+    "number": "H107",
+    "word": "רֹתֶגָאִ",
+    "definition": "fem. de 104; epístola:—carta.",
+    "transliteration": "igguéret"
+  },
+  "H108": {
+    "number": "H108",
+    "word": "דָא",
+    "definition": "de lo mismo que 181 (en el sentido de envolver); niebla:—vapor.",
+    "transliteration": "ed"
+  },
+  "H109": {
+    "number": "H109",
+    "word": "דבַאָ",
+    "definition": "raíz prim.; languidecer:—dolor.",
+    "transliteration": "adab"
+  },
+  "H110": {
+    "number": "H110",
+    "word": "אלֵךְ דְאַ",
+    "definition": "prob. de 109 (en el sentido de castigo) y 410; disciplinado de Dios; Adbeel, hijo de Ismael:—Adbeel.",
+    "transliteration": "Adbeel"
+  },
+  "H111": {
+    "number": "H111",
+    "word": "דדַאֲ",
+    "definition": "prob. var. ort. de 2301; Adad, un edomita:—Hadad.",
+    "transliteration": "Ádad"
+  },
+  "H112": {
+    "number": "H112",
+    "word": "אדו",
+    "definition": "de der. inc.; Iddo, un isr.:—Iddo.",
+    "transliteration": "Iddo"
+  },
+  "H113": {
+    "number": "H113",
+    "word": "אדון",
+    "definition": "o (abr.) de una raíz que no se usa que sign. gobernar); soberano, i.e. controlador (humano o divino):—amo, dueño, señor. Comp. también los nombres que empiezan con «Adoni-«",
+    "transliteration": "adón"
+  },
+  "H114": {
+    "number": "H114",
+    "word": "אדוֹן",
+    "definition": "prob. intens. de 113; poderoso; Addón, apar. un isr.:—Adón.",
+    "transliteration": "Addón"
+  },
+  "H115": {
+    "number": "H115",
+    "word": "יסְדוֹר אֲ",
+    "definition": "dual de 142 (en el sentido de eminencia); montículo doble; Adoraim, un lugar en Pal.:—Adoraim.",
+    "transliteration": "Adoraím"
+  },
+  "H116": {
+    "number": "H116",
+    "word": "ידַאֶ",
+    "definition": "(cald.); de der. inc.; entonces (de tiempo):—instante.",
+    "transliteration": "edayin"
+  },
+  "H117": {
+    "number": "H117",
+    "word": "דירְאַ",
+    "definition": "de 142; ancho o (gen.) grande; fig. poderoso:—estruendo, fuerte, grande, impetuoso, íntegro, magnífico, mayoral, noble, poderoso, recio, valiente.",
+    "transliteration": "addir"
+  },
+  "H118": {
+    "number": "H118",
+    "word": "יאָלְ דַאֲ",
+    "definition": "de der. persa; Adalía, un hijo de Amán:—Adalía.",
+    "transliteration": "adaliá"
+  },
+  "H119": {
+    "number": "H119",
+    "word": "דאָ",
+    "definition": "mostrar sangre (en el rostro), i.e. rubor o enrojecerse:—enrojecer, rojear, rojo, rubio.",
+    "transliteration": "adam"
+  },
+  "H120": {
+    "number": "H120",
+    "word": "דָא",
+    "definition": "de 119; rojizo, i.e. un ser humano (individuo o la especie, humanidad, etc.):—Adán, común, gente, humano, persona, varón.",
+    "transliteration": "adám"
+  },
+  "H121": {
+    "number": "H121",
+    "word": "דסָאָ",
+    "definition": "lo mismo que 120; Adam, nombre del primer hombre, también lugar en Pal.:—Adam, Adan.",
+    "transliteration": "Adám"
+  },
+  "H122": {
+    "number": "H122",
+    "word": "םא",
+    "definition": "de 119; rosado:—alazán, rojo.",
+    "transliteration": "adóm"
+  },
+  "H123": {
+    "number": "H123",
+    "word": "אדֶ",
+    "definition": "o (completo) de 122; rojo [véase Gn 25.25]; Edom, gemelo mayor de Jacob; de aquí, región (Idumea) ocupada por él:—Edom, edomita, Idumea.",
+    "transliteration": "Edom"
+  },
+  "H124": {
+    "number": "H124",
+    "word": "דֹא",
+    "definition": "de 119; rojizo, i.e. rubí, granate o alguna otra gema de color rojo:—cornerina, piedra sárdica, sardio.",
+    "transliteration": "dem"
+  },
+  "H125": {
+    "number": "H125",
+    "word": "וּסָמְ דַאֲ",
+    "definition": "redupl. de 119; rojizo:—rojiza.",
+    "transliteration": "adamdám"
+  },
+  "H126": {
+    "number": "H126",
+    "word": "מהָדְאַ",
+    "definition": "contr. de 127; tierroso; Admá, un lugar cerca del Mar Muerto:—Admá.",
+    "transliteration": "Admá"
+  },
+  "H127": {
+    "number": "H127",
+    "word": "מהָדָאֲ",
+    "definition": "de 119; tierra (de su rojez gen.):—agricultura, labrador, nación, país, tierra.",
+    "transliteration": "adamá"
+  },
+  "H128": {
+    "number": "H128",
+    "word": "מהָדָאֲ",
+    "definition": "lo mismo que 127; Adamá, un lugar en Pal.:—Adama.",
+    "transliteration": "Adamá"
+  },
+  "H129": {
+    "number": "H129",
+    "word": "מי דָ",
+    "definition": "de 127; tierroso; Adamí, un lugar en Pal.:—Adami (-neceb).",
+    "transliteration": "Adamí"
+  },
+  "H130": {
+    "number": "H130",
+    "word": "דוֹמי אֱ",
+    "definition": "patron. de 123; edomita, o desc. de (o hab. de) Edom:—edomita.",
+    "transliteration": "edomí"
+  }
+}

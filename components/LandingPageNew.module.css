@@ -1,0 +1,642 @@
+/* LandingPageNew.module.css */
+
+.container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+}
+
+/* Theme Variables mapped to CSS Custom Properties for the scope of this component */
+.container[data-theme="dark"] {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #121212;
+    --text-primary: #fafafa;
+    --text-secondary: #a0a0a0;
+    --accent: #6B4D8A;
+    --accent-light: #8B6BB7;
+    --gold: #F4C430;
+    --border: rgba(107, 77, 138, 0.2);
+    --shadow: rgba(107, 77, 138, 0.1);
+}
+
+.container[data-theme="light"] {
+    --bg-primary: #fafafa;
+    --bg-secondary: #ffffff;
+    --text-primary: #0a0a0a;
+    --text-secondary: #666666;
+    --accent: #6B4D8A;
+    --accent-light: #8B6BB7;
+    --gold: #F4C430;
+    --border: rgba(107, 77, 138, 0.15);
+    --shadow: rgba(107, 77, 138, 0.08);
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+}
+
+.heroTitle {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.heroSubtitle {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.themeToggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.themeToggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--shadow);
+}
+
+.carouselSection {
+    padding: 6rem 0;
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+    color: var(--text-primary);
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+}
+
+.sectionTitle {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sectionDescription {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carouselContainer {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.carouselTrack {
+    display: flex;
+    gap: 2rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2rem;
+    /* Space for shadows */
+}
+
+.autorCard {
+    min-width: 320px;
+    background: var(--bg-primary);
+    border-radius: 24px;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.autorCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.autorCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px var(--shadow);
+    border-color: var(--accent-light);
+}
+
+.autorCard:hover::before {
+    transform: scaleX(1);
+}
+
+.autorImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6B4D8A, #8B6BB7);
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.autorName {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.autorYears {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.autorQuote {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-style: italic;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.autorTag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--gold);
+    color: #0a0a0a;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.carouselNav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.carouselNav:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carouselNav svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-primary);
+}
+
+.carouselNav:hover svg {
+    fill: white;
+}
+
+.navPrev {
+    left: 1rem;
+}
+
+.navNext {
+    right: 1rem;
+}
+
+.carouselDots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.dotActive {
+    background: var(--accent);
+    width: 24px;
+    border-radius: 4px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.autoplayIndicator {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.autoplayIndicator::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+}
+
+/* Blog Section */
+.blogSection {
+    padding: 6rem 2rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.blogGrid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.blogCard {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.blogCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px var(--shadow);
+    border-color: var(--accent-light);
+}
+
+.blogTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.blogExcerpt {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Como Funciona Section */
+.comoFuncionaSection {
+    padding: 6rem 2rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.featuresGrid {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.featureCard {
+    text-align: center;
+    padding: 2rem;
+}
+
+.featureIcon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.featureTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--gold);
+}
+
+.featureDescription {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Pricing Section */
+.pricingSection {
+    padding: 6rem 2rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.pricingGrid {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.pricingCard {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.pricingCard:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 60px var(--shadow);
+}
+
+.pricingCardPopular {
+    border-color: var(--gold);
+    background: linear-gradient(180deg, rgba(244, 196, 48, 0.05) 0%, var(--bg-secondary) 100%);
+}
+
+.pricingBadge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--bg-primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pricingName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.pricingPrice {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.pricingPeriod {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.pricingFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.pricingFeatures li {
+    padding: 0.75rem 0;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9375rem;
+}
+
+.pricingFeatures li:last-child {
+    border-bottom: none;
+}
+
+.pricingButton {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 1.5rem;
+}
+
+.pricingButton:hover {
+    background: var(--accent-light);
+    transform: scale(1.02);
+}
+
+.pricingCardPopular .pricingButton {
+    background: var(--gold);
+    color: var(--bg-primary);
+}
+
+.pricingCardPopular .pricingButton:hover {
+    background: #F4C430;
+    opacity: 0.9;
+}
+
+/* CTA Section */
+.ctaSection {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    text-align: center;
+    color: white;
+}
+
+.ctaTitle {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.ctaDescription {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+}
+
+.ctaButton {
+    display: inline-block;
+    padding: 1.25rem 3rem;
+    background: var(--gold);
+    color: var(--bg-primary);
+    border-radius: 50px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.ctaButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(244, 196, 48, 0.4);
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 2rem;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.footerText {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.footerCopyright {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+    .carouselContainer {
+        padding: 0 1rem;
+    }
+
+    .carouselTrack {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .autorCard {
+        min-width: 280px;
+        padding: 2rem 1.5rem;
+    }
+
+    .carouselNav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navPrev {
+        left: 0.5rem;
+    }
+
+    .navNext {
+        right: 0.5rem;
+    }
+}

@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 15;
+  --background-end-rgb: 10, 10, 15;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      rgba(var(--background-start-rgb), 0.8),
+      rgba(var(--background-end-rgb), 0.9)),
+    url('/landing-v3/subtle_nebula_background_1766280007306.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.option-button {
+  background: rgba(122, 91, 166, 0.1);
+  border: 1px solid rgba(122, 91, 166, 0.3);
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #7A5BA6;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.option-button:hover {
+  background: rgba(122, 91, 166, 0.2);
+  border-color: #7A5BA6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(122, 91, 166, 0.3);
+}
+
+.option-button:active {
+  transform: translateY(0);
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+  color: #7A5BA6;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Blog Content Styles */
+.prose h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #a1a1aa;
+}
+
+.prose strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.prose ul,
+.prose ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+  color: #a1a1aa;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blog Content Styles - Prose Invert */
+.prose-invert h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.prose-invert h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.prose-invert p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #d4d4d8;
+}
+
+.prose-invert strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.prose-invert em {
+  color: #a1a1aa;
+  font-style: italic;
+}
+
+.prose-invert blockquote {
+  border-left: 4px solid #6B4D8A;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #a1a1aa;
+}
