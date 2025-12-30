@@ -143,6 +143,14 @@ export default function Navbar() {
                                 Precio
                             </Link>
 
+                            <Link
+                                href="/biblioteca"
+                                onClick={() => setOpen(false)}
+                                className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
+                            >
+                                Biblioteca
+                            </Link>
+
                             <div className="pt-4 mt-4 border-t border-white/10 space-y-2">
                                 <Link
                                     href="/signin"
@@ -168,7 +176,7 @@ export default function Navbar() {
     }, [open]);
 
     // Don't show Navbar on dashboard or admin pages
-    const isDashboard = pathname?.includes('dashboard') || pathname?.includes('admin') || pathname?.includes('biblioteca');
+    const isDashboard = pathname?.includes('dashboard') || pathname?.includes('admin') || pathname?.includes('tutor');
     if (isDashboard) {
         return null;
     }
@@ -186,6 +194,7 @@ export default function Navbar() {
                     <nav className="hidden md:flex items-center gap-6 text-white/70">
                         <Link className="hover:text-white" href="/#como-funciona">Cómo funciona</Link>
                         <Link className="hover:text-white" href="/#precio">Precio</Link>
+                        <Link className="hover:text-white" href="/biblioteca">Biblioteca</Link>
                         <Link className="hover:text-white" href="/mi-escritorio">Mi Escritorio</Link>
                         <Link className="hover:text-white" href="/login">Entrar</Link>
                         <Link className="px-4 py-2 rounded-xl bg-white text-black font-semibold" href="/signup">

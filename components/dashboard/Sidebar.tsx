@@ -25,7 +25,7 @@ import { useAuth } from '@/contexts/AuthContext';
 
 const navItems = [
     { icon: MessageSquare, label: 'Conversar', href: '/tutor' },
-    { icon: Library, label: 'Biblioteca', href: '/biblioteca' },
+    // Biblioteca moved to top Navbar
     { icon: Lightbulb, label: 'Citas y Testimonios', href: '/sabiduria' },
     { icon: BookOpen, label: 'Blog', href: '/blog' },
     { icon: Calendar, label: 'Manifestaciones', href: '/tutor/cuaderno' },
