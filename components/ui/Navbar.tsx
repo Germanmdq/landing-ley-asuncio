@@ -178,8 +178,8 @@ export default function Navbar() {
             {/* Navbar */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur border-b border-white/10">
                 <div className="h-16 max-w-6xl mx-auto px-4 flex items-center justify-between">
-                    <Link href="/" className="text-white font-semibold tracking-tight">
-                        Sabiduría Online
+                    <Link href="/" className="text-white font-bold tracking-tight text-xl">
+                        El Club de la Imaginación
                     </Link>
 
                     {/* Desktop */}

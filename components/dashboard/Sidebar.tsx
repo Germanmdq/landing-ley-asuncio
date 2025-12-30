@@ -178,7 +178,7 @@ export default function Sidebar({ isDemo = false }: { isDemo?: boolean }) {
                 <header className="md:hidden fixed top-0 left-0 right-0 bg-[#0a0a0a] border-b border-white/5 z-[2147483647]">
                     <div className="flex items-center justify-between px-4 py-3">
                         {/* Logo */}
-                        <h1 className="text-lg font-bold">Neville</h1>
+                        <h1 className="text-lg font-bold">El Club</h1>
 
                         {/* Hamburger button */}
                         <button
@@ -270,15 +270,15 @@ export default function Sidebar({ isDemo = false }: { isDemo?: boolean }) {
                     {/* User Info at the bottom */}
                     <div className="p-6 border-t border-white/5 bg-white/[0.02]">
                         <div className="flex items-center gap-3">
-                            {user?.photoURL ? (
-                                <img src={user.photoURL} alt={user.displayName || 'User'} className="w-10 h-10 rounded-full" />
+                            {user?.user_metadata?.avatar_url ? (
+                                <img src={user.user_metadata.avatar_url} alt={user.user_metadata.full_name || 'User'} className="w-10 h-10 rounded-full" />
                             ) : (
                                 <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                                    <span className="text-primary font-bold">{user?.displayName?.[0] || 'U'}</span>
+                                    <span className="text-primary font-bold">{user?.user_metadata?.full_name?.[0] || user?.email?.[0] || 'U'}</span>
                                 </div>
                             )}
                             <div className="flex-1 overflow-hidden">
-                                <p className="text-sm font-medium text-white truncate">{user?.displayName || 'Usuario'}</p>
+                                <p className="text-sm font-medium text-white truncate">{user?.user_metadata?.full_name || 'Usuario'}</p>
                                 <p className="text-xs text-white/40 truncate">{user?.email}</p>
                             </div>
                         </div>
@@ -308,15 +308,15 @@ export default function Sidebar({ isDemo = false }: { isDemo?: boolean }) {
                 {/* User section */}
                 <div className="p-4 border-t border-white/5">
                     <div className="flex items-center gap-3 px-4 py-3 mb-2">
-                        {user?.photoURL ? (
-                            <img src={user.photoURL} alt={user.displayName || 'User'} className="w-10 h-10 rounded-full" />
+                        {user?.user_metadata?.avatar_url ? (
+                            <img src={user.user_metadata.avatar_url} alt={user.user_metadata.full_name || 'User'} className="w-10 h-10 rounded-full" />
                         ) : (
                             <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                                <span className="text-primary font-bold">{user?.displayName?.[0] || 'U'}</span>
+                                <span className="text-primary font-bold">{user?.user_metadata?.full_name?.[0] || user?.email?.[0] || 'U'}</span>
                             </div>
                         )}
                         <div className="flex-1 overflow-hidden">
-                            <p className="text-sm font-medium truncate">{user?.displayName || 'Usuario'}</p>
+                            <p className="text-sm font-medium truncate">{user?.user_metadata?.full_name || 'Usuario'}</p>
                             <p className="text-xs text-text-muted truncate">{user?.email}</p>
                         </div>
                     </div>
