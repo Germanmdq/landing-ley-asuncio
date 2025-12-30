@@ -193,9 +193,10 @@ export default function Navbar() {
                     {/* Desktop */}
                     <nav className="hidden md:flex items-center gap-6 text-white/70">
                         <Link className="hover:text-white" href="/#como-funciona">Cómo funciona</Link>
-                        <Link className="hover:text-white" href="/#precio">Precio</Link>
+                        <Link className="hover:text-white" href="/#planes">Planes</Link>
                         <Link className="hover:text-white" href="/biblioteca">Biblioteca</Link>
-                        <Link className="hover:text-white" href="/mi-escritorio">Mi Escritorio</Link>
+                        <Link className="hover:text-white" href="/comunidad">Comunidad</Link>
+                        <Link className="hover:text-white" href="/blog">Blog</Link>
                         <Link className="hover:text-white" href="/login">Entrar</Link>
                         <Link className="px-4 py-2 rounded-xl bg-white text-black font-semibold" href="/signup">
                             Empezar
