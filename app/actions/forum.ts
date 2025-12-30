@@ -41,7 +41,7 @@ export async function createThread(prevState: any, formData: FormData) {
     const validated = threadSchema.safeParse(rawData)
 
     if (!validated.success) {
-        return { message: validated.error.errors[0].message }
+        return { message: validated.error.issues[0].message }
     }
 
     const { error } = await supabase.from('forum_threads').insert({
@@ -72,7 +72,7 @@ export async function replyToThread(prevState: any, formData: FormData) {
     })
 
     if (!validated.success) {
-        return { message: validated.error.errors[0].message }
+        return { message: validated.error.issues[0].message }
     }
 
     const { error } = await supabase.from('forum_replies').insert({
