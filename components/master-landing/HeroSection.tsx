@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShimmerText } from './ui/ShimmerText';
 import { landingContent } from '@/data/landingContent';
-import { SlideProps } from '../types';
+import { SlideProps } from './types';
 import { MoveDown, ArrowRight, Github } from 'lucide-react';
 
 export default function HeroSection({ isActive }: SlideProps) {

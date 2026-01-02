@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideProps } from '../types';
+import { SlideProps } from './types';
 import { BorderBeam } from './ui/BorderBeam';
 import { Library, MessageCircle, History } from 'lucide-react';
 import { landingContent } from '@/data/landingContent';

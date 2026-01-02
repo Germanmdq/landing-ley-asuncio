@@ -29,9 +29,9 @@ export default function ThreadComposer({ categories }: { categories: any[] }) {
 
         startTransition(async () => {
             const result = await createThread(null, formData);
-            if (result?.error || (result?.message && !result.success)) {
+            if (!result.success) {
                 setError(result.message || 'Error desconocido');
-            } else if (result?.success) {
+            } else {
                 router.push('/comunidad');
                 router.refresh();
             }
