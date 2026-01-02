@@ -14,12 +14,12 @@ export const revalidate = 60;
 export default async function BlogIndexPage() {
     const supabase = createClient();
 
-    // Query 'posts' table from Payload
+    // Query 'articulos' table
     const { data: posts, error } = await supabase
-        .from('posts')
-        .select('*') // Select all for now to inspect shape if needed, usually title, slug, meta, publishedAt
-        .eq('_status', 'published')
-        .order('publishedAt', { ascending: false });
+        .from('articulos')
+        .select('*')
+        .eq('estado', 'publicado')
+        .order('created_at', { ascending: false });
 
     if (error) {
         console.error("Error fetching articles:", error);
@@ -47,12 +47,6 @@ export default async function BlogIndexPage() {
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {posts.map((post) => {
-                            // Extract meta info (Payload structure)
-                            const meta = post.meta || {};
-                            const imageUrl = meta.image ? (typeof meta.image === 'object' ? meta.image.url : '') : ''; // Depending on if populate is handling it or just ID. Supabase raw query returns IDs usually unless joined.
-                            // Actually, Supabase query on 'posts' will likely return 'heroImage' as ID. We need to fetch Media or use a joined query if possible.
-                            // For now, let's use a placeholder if image is missing.
-
                             return (
                                 <Link
                                     href={`/blog/${post.slug}`}
@@ -61,12 +55,17 @@ export default async function BlogIndexPage() {
                                 >
                                     {/* Image */}
                                     <div className="relative h-48 w-full overflow-hidden bg-white/5">
-                                        {/* Note: In direct Supabase query, we get IDs for relations like media. 
-                                             To get the URL, we'd need to join 'media' table. 
-                                             Simpler workaround for MVP: Placeholder or specific gradient. */}
-                                        <div className="w-full h-full bg-gradient-to-br from-purple-900/50 to-black flex items-center justify-center text-white/20">
-                                            <span className="text-sm">Lectura</span>
-                                        </div>
+                                        {post.imagen_portada ? (
+                                            <img
+                                                src={post.imagen_portada}
+                                                alt={post.titulo}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        ) : (
+                                            <div className="w-full h-full bg-gradient-to-br from-purple-900/50 to-black flex items-center justify-center text-white/20">
+                                                <span className="text-sm">Lectura</span>
+                                            </div>
+                                        )}
                                     </div>
 
                                     {/* Content */}
@@ -75,7 +74,7 @@ export default async function BlogIndexPage() {
                                             <div className="flex items-center gap-1">
                                                 <Calendar size={12} />
                                                 <span>
-                                                    {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString('es-ES', {
+                                                    {post.created_at ? new Date(post.created_at).toLocaleDateString('es-ES', {
                                                         year: 'numeric',
                                                         month: 'short',
                                                         day: 'numeric'
@@ -85,11 +84,11 @@ export default async function BlogIndexPage() {
                                         </div>
 
                                         <h2 className="text-xl font-bold mb-3 text-white group-hover:text-primary transition-colors line-clamp-2">
-                                            {post.title}
+                                            {post.titulo}
                                         </h2>
 
                                         <p className="text-gray-400 text-sm line-clamp-3 mb-6 flex-1">
-                                            {meta.description || 'Sin descripción previa.'}
+                                            {post.resumen || post.meta_description || 'Sin descripción previa.'}
                                         </p>
 
                                         <div className="flex items-center text-primary text-sm font-medium mt-auto">
