@@ -1,5 +1,5 @@
 // ... imports ...
-import { createClient } from '@supabase/supabase-js';
+import { createClient } from '@/utils/supabase/server';
 import Link from 'next/link';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { Metadata } from 'next';
@@ -12,10 +12,7 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function BlogIndexPage() {
-    const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    );
+    const supabase = createClient();
 
     // Query 'posts' table from Payload
     const { data: posts, error } = await supabase

@@ -1,13 +1,10 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient } from '@/utils/supabase/server';
 import { Book, Video, Mic, FileText, Lock } from 'lucide-react';
 
 export const revalidate = 60;
 
 export default async function BibliotecaPage() {
-    const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    );
+    const supabase = createClient();
 
     const { data: items, error } = await supabase
         .from('library')
