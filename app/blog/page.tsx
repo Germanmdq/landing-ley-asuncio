@@ -18,7 +18,7 @@ export default async function BibliotecaPage() {
         .from('autores')
         .select(`
             *,
-            articulos:articulos(count)
+            articulos(count)
         `)
         .order('nombre');
 
@@ -85,7 +85,7 @@ export default async function BibliotecaPage() {
                                                 {autor.nombre}
                                             </h3>
                                             <p className="text-sm text-white/40">
-                                                {(autor.articulos as any)?.[0]?.count || 0} artículos
+                                                {autor.articulos?.[0]?.count || 0} artículos
                                             </p>
                                         </div>
                                     </div>
