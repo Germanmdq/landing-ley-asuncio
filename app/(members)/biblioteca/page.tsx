@@ -1,5 +1,6 @@
 import { createClient } from '@/utils/supabase/server';
 import { Book, Video, Mic, FileText, Lock } from 'lucide-react';
+import Link from 'next/link';
 
 export const revalidate = 60;
 
@@ -9,7 +10,7 @@ export default async function BibliotecaPage() {
     const { data: items, error } = await supabase
         .from('library')
         .select('*')
-        .order('createdAt', { ascending: false });
+        .order('created_at', { ascending: false });
 
     // Helper to get icon
     const getIcon = (type: string) => {
@@ -33,7 +34,11 @@ export default async function BibliotecaPage() {
             ) : (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {items.map((item) => (
-                        <div key={item.id} className="bg-surface border border-white/10 p-6 rounded-xl group hover:border-primary/50 transition-colors">
+                        <Link
+                            href={`/biblioteca/${item.id}`}
+                            key={item.id}
+                            className="bg-surface border border-white/10 p-6 rounded-xl group hover:border-primary/50 transition-colors block"
+                        >
                             <div className="flex items-start justify-between mb-4">
                                 <span className={`p-2 rounded-lg bg-white/5 text-primary`}>
                                     {getIcon(item.type)}
@@ -45,11 +50,10 @@ export default async function BibliotecaPage() {
                                 )}
                             </div>
                             <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
-                            <p className="text-sm text-gray-400 mb-2">{item.author}</p>
                             {item.description && (
                                 <p className="text-sm text-text-muted line-clamp-2">{item.description}</p>
                             )}
-                        </div>
+                        </Link>
                     ))}
                 </div>
             )}

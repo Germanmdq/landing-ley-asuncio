@@ -122,9 +122,10 @@ export default async function BibliotecaPage() {
                                 const Icon = item.type === 'video' ? Video : item.type === 'audio' ? Headphones : BookOpen;
 
                                 return (
-                                    <div
+                                    <Link
+                                        href={`/biblioteca/${item.id}`}
                                         key={item.id}
-                                        className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-white/30 hover:bg-white/10 transition-all"
+                                        className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-white/30 hover:bg-white/10 transition-all group"
                                     >
                                         <div className="flex items-start gap-3 mb-4">
                                             <div className="p-2 rounded-lg bg-primary/20 text-primary">
@@ -136,7 +137,7 @@ export default async function BibliotecaPage() {
                                                 </span>
                                             )}
                                         </div>
-                                        <h3 className="font-bold text-white mb-2 line-clamp-2">
+                                        <h3 className="font-bold text-white mb-2 line-clamp-2 group-hover:text-primary transition-colors">
                                             {item.title}
                                         </h3>
                                         {item.description && (
@@ -144,7 +145,7 @@ export default async function BibliotecaPage() {
                                                 {item.description}
                                             </p>
                                         )}
-                                    </div>
+                                    </Link>
                                 );
                             })}
                         </div>
