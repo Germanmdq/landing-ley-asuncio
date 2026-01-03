@@ -3,12 +3,14 @@
 import { useState, useTransition } from 'react';
 import { createThread } from '@/app/actions/forum';
 import RichTextEditor from './RichTextEditor';
+import ImageUpload from './ImageUpload';
 import { useRouter } from 'next/navigation';
 
 export default function ThreadComposer({ categories }: { categories: any[] }) {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [categoryId, setCategoryId] = useState(categories[0]?.id || '');
+    const [images, setImages] = useState<string[]>([]);
     const [isPending, startTransition] = useTransition();
     const [error, setError] = useState('');
     const router = useRouter();
@@ -26,6 +28,7 @@ export default function ThreadComposer({ categories }: { categories: any[] }) {
         formData.append('title', title);
         formData.append('content', content);
         formData.append('categoryId', categoryId);
+        formData.append('images', JSON.stringify(images));
 
         startTransition(async () => {
             const result = await createThread(null, formData);
@@ -79,6 +82,11 @@ export default function ThreadComposer({ categories }: { categories: any[] }) {
                     onChange={setContent}
                     placeholder="Comparte tu experiencia o duda..."
                 />
+            </div>
+
+            <div className="space-y-2">
+                <label className="text-sm font-medium text-white/60">Imágenes (opcional)</label>
+                <ImageUpload onImagesChange={setImages} currentImages={images} />
             </div>
 
             <div className="flex justify-end pt-2">
