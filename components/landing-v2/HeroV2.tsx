@@ -12,11 +12,9 @@ const SpiralAnimation = dynamic(() => import('@/components/ui/SpiralAnimation').
 export default function HeroV2() {
     return (
         <section className="relative min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden pt-20">
-            {/* Simple visible animated background */}
-            <div className="absolute inset-0 -z-10 bg-black">
-                <div className="absolute inset-0 bg-gradient-radial from-purple-900/30 via-black to-black animate-pulse"></div>
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[120px] animate-pulse"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] animate-pulse"></div>
+            {/* Spiral Animation Background */}
+            <div className="fixed inset-0 -z-10">
+                <SpiralAnimation />
             </div>
 
             <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
