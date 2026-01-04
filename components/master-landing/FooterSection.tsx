@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideProps } from '../types';
+import { SlideProps } from './types';
 import { landingContent } from '@/data/landingContent';
 import { ArrowRight } from 'lucide-react';
 

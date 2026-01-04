@@ -15,14 +15,51 @@ export default async function ComunidadPage() {
         .select('*')
         .order('order', { ascending: true });
 
-    // Fetch Recent Threads (limit 5)
-    // We need to join with author but for now let's just fetch threads.
-    // Ideally we have a view or function, but simple select works.
+    // Fetch all threads to count by category
+    const { data: allThreads } = await supabase
+        .from('forum_threads')
+        .select('id, category_id');
+
+    // Count threads per category
+    const threadCounts = allThreads?.reduce((acc, thread) => {
+        acc[thread.category_id] = (acc[thread.category_id] || 0) + 1;
+        return acc;
+    }, {} as Record<string, number>) || {};
+
+    // Combine categories with thread counts
+    const categoriesWithStats = categories?.map(cat => ({
+        ...cat,
+        threadCount: threadCounts[cat.id] || 0
+    }));
+
+    // Fetch Recent Threads with reply counts
     const { data: recentThreads } = await supabase
         .from('forum_threads')
-        .select('*')
+        .select(`
+            *,
+            category:forum_categories(name, slug)
+        `)
         .order('created_at', { ascending: false })
-        .limit(5);
+        .limit(10);
+
+    // Get reply counts for each thread
+    const threadIds = recentThreads?.map(t => t.id) || [];
+    const { data: allReplies } = await supabase
+        .from('forum_replies')
+        .select('id, thread_id')
+        .in('thread_id', threadIds.length > 0 ? threadIds : ['']);
+
+    // Count replies per thread
+    const replyCounts = allReplies?.reduce((acc, reply) => {
+        acc[reply.thread_id] = (acc[reply.thread_id] || 0) + 1;
+        return acc;
+    }, {} as Record<string, number>) || {};
+
+    // Combine threads with reply counts
+    const threadsWithStats = recentThreads?.map(thread => ({
+        ...thread,
+        replyCount: replyCounts[thread.id] || 0
+    }));
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-8 space-y-12">
@@ -56,7 +93,7 @@ export default async function ComunidadPage() {
             <section>
                 <h2 className="text-lg font-bold text-white mb-4">Categorías</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {categories?.map((cat) => (
+                    {categoriesWithStats?.map((cat) => (
                         <CategoryCard key={cat.id} category={cat} />
                     ))}
                 </div>
@@ -65,7 +102,7 @@ export default async function ComunidadPage() {
             {/* Recent Activity */}
             <section>
                 <h2 className="text-lg font-bold text-white mb-4">Actividad Reciente</h2>
-                <ThreadList threads={recentThreads || []} />
+                <ThreadList threads={threadsWithStats || []} />
             </section>
         </div>
     );

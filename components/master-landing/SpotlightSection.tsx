@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideProps } from '../types';
+import { SlideProps } from './types';
 import { SpotlightCard } from './ui/SpotlightCard';
 import { landingContent } from '@/data/landingContent';
 import { UserCheck, BookOpen, Save, Map } from 'lucide-react';

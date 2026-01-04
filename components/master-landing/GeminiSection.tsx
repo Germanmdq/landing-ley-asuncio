@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideProps } from '../types';
+import { SlideProps } from './types';
 import { landingContent } from '@/data/landingContent';
 import ChatInterface from '@/components/dashboard/ChatInterface';
 import Sidebar from '@/components/dashboard/Sidebar';
@@ -49,7 +49,7 @@ export default function GeminiSection({ isActive }: SlideProps) {
 
                             {/* Real Chat Interface */}
                             <div className="flex-1 overflow-hidden relative">
-                                <ChatInterface />
+                                <ChatInterface selectedMaestro="neville" />
                             </div>
                         </div>
                     </div>

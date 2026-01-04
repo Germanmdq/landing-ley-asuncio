@@ -136,36 +136,44 @@ export default function Navbar() {
                             </Link>
 
                             <Link
-                                href="/#precio"
+                                href="/#planes"
                                 onClick={() => setOpen(false)}
                                 className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
                             >
-                                Precio
+                                Planes
                             </Link>
 
                             <Link
-                                href="/biblioteca"
+                                href="/blog"
                                 onClick={() => setOpen(false)}
                                 className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
                             >
                                 Biblioteca
                             </Link>
 
+                            <Link
+                                href="/comunidad"
+                                onClick={() => setOpen(false)}
+                                className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
+                            >
+                                Foro
+                            </Link>
+
+                            <Link
+                                href="/dosis-mentales"
+                                onClick={() => setOpen(false)}
+                                className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
+                            >
+                                Dosis Mentales
+                            </Link>
+
                             <div className="pt-4 mt-4 border-t border-white/10 space-y-2">
                                 <Link
-                                    href="/signin"
-                                    onClick={() => setOpen(false)}
-                                    className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
-                                >
-                                    Iniciar sesión
-                                </Link>
-
-                                <Link
-                                    href="/signup"
+                                    href="/login"
                                     onClick={() => setOpen(false)}
                                     className="block px-4 py-3 rounded-xl bg-white text-black font-semibold text-center"
                                 >
-                                    Crear cuenta
+                                    Entrar
                                 </Link>
                             </div>
                         </nav>
@@ -194,12 +202,11 @@ export default function Navbar() {
                     <nav className="hidden md:flex items-center gap-6 text-white/70">
                         <Link className="hover:text-white" href="/#como-funciona">Cómo funciona</Link>
                         <Link className="hover:text-white" href="/#planes">Planes</Link>
-                        <Link className="hover:text-white" href="/biblioteca">Biblioteca</Link>
-                        <Link className="hover:text-white" href="/comunidad">Comunidad</Link>
-                        <Link className="hover:text-white" href="/blog">Blog</Link>
-                        <Link className="hover:text-white" href="/login">Entrar</Link>
-                        <Link className="px-4 py-2 rounded-xl bg-white text-black font-semibold" href="/signup">
-                            Empezar
+                        <Link className="hover:text-white" href="/blog">Biblioteca</Link>
+                        <Link className="hover:text-white" href="/comunidad">Foro</Link>
+                        <Link className="hover:text-white" href="/dosis-mentales">Dosis Mentales</Link>
+                        <Link className="px-4 py-2 rounded-xl bg-white text-black font-semibold" href="/login">
+                            Entrar
                         </Link>
                     </nav>
 

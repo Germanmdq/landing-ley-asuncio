@@ -61,6 +61,7 @@ export default function ChatInterface({ selectedMaestro }: { selectedMaestro: st
 
                 // Add User Message
                 addMessage({
+                    id: Date.now().toString(),
                     role: 'user',
                     content: step.trigger,
                     timestamp: new Date()
@@ -76,7 +77,7 @@ export default function ChatInterface({ selectedMaestro }: { selectedMaestro: st
             const msgId = Date.now().toString();
             addMessage({
                 id: msgId,
-                role: 'assistant',
+                role: 'neville',
                 content: '',
                 timestamp: new Date(),
                 isStreaming: true
@@ -109,6 +110,7 @@ export default function ChatInterface({ selectedMaestro }: { selectedMaestro: st
         if (isDemoStart) {
             // Add the initial "hola" immediately
             addMessage({
+                id: Date.now().toString(),
                 role: 'user',
                 content: content,
                 timestamp: new Date()
@@ -121,7 +123,7 @@ export default function ChatInterface({ selectedMaestro }: { selectedMaestro: st
                 const msgId = Date.now().toString();
                 addMessage({
                     id: msgId,
-                    role: 'assistant',
+                    role: 'neville',
                     content: '',
                     timestamp: new Date(),
                     isStreaming: true
@@ -219,7 +221,6 @@ export default function ChatInterface({ selectedMaestro }: { selectedMaestro: st
                         />
                         <Button
                             type="submit"
-                            size="icon"
                             className="h-8 w-8 shrink-0 bg-white text-black hover:bg-gray-200 rounded-lg transition-colors"
                             disabled={!input.trim() || isLoading}
                         >

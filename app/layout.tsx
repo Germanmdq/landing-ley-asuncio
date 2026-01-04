@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "El Club de la Imaginación",
@@ -22,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es" className="dark">
-            <body className={`${inter.className} bg-background text-text min-h-screen antialiased overflow-x-hidden overscroll-x-none`}>
+            <body className="bg-background text-text min-h-screen antialiased overflow-x-hidden overscroll-x-none font-sans">
                 <AuthProvider>
                     {/* isolate = mezcla controlada + pila más predecible */}
                     <div className="relative isolate flex min-h-screen flex-col overflow-x-clip">
