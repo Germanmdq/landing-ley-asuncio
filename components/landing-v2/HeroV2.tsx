@@ -2,88 +2,90 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-import { ArrowRight, Sparkles, Users, BookOpen, MessageCircle } from "lucide-react";
-
-const SpiralAnimation = dynamic(() => import('@/components/ui/SpiralAnimation').then(mod => ({ default: mod.SpiralAnimation })), {
-    ssr: false,
-});
+import { ArrowRight } from "lucide-react";
 
 export default function HeroV2() {
     return (
-        <section className="relative min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden pt-20">
-            {/* Spiral Animation Background */}
-            <div className="fixed inset-0 -z-10">
-                <SpiralAnimation />
+        <section className="relative min-h-screen flex flex-col justify-center items-center px-4 overflow-hidden">
+            {/* Lusion-style animated background */}
+            <div className="fixed inset-0 -z-10 bg-black">
+                {/* Animated gradient orbs */}
+                <motion.div
+                    className="absolute top-0 left-0 w-full h-full"
+                    animate={{
+                        background: [
+                            "radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)",
+                            "radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)",
+                            "radial-gradient(circle at 50% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)",
+                            "radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)",
+                        ]
+                    }}
+                    transition={{
+                        duration: 20,
+                        repeat: Infinity,
+                        ease: "linear"
+                    }}
+                />
+                <motion.div
+                    className="absolute top-0 left-0 w-full h-full"
+                    animate={{
+                        background: [
+                            "radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%)",
+                            "radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.1) 0%, transparent 50%)",
+                            "radial-gradient(circle at 50% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%)",
+                            "radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%)",
+                        ]
+                    }}
+                    transition={{
+                        duration: 15,
+                        repeat: Infinity,
+                        ease: "linear"
+                    }}
+                />
+                {/* Grid overlay */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:100px_100px]" />
             </div>
 
-            <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-                {/* Badges */}
+            {/* Content */}
+            <div className="relative z-10 max-w-6xl mx-auto text-center space-y-12">
+                {/* Main Heading - Lusion style */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="flex flex-wrap justify-center gap-3 text-sm font-medium text-white/60"
+                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                    className="space-y-6"
                 >
-                    <span className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
-                        <BookOpen className="w-3.5 h-3.5" /> Blog Profundo
-                    </span>
-                    <span className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
-                        <Users className="w-3.5 h-3.5" /> Comunidad Activa
-                    </span>
-                    <span className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
-                        <MessageCircle className="w-3.5 h-3.5" /> Acompañamiento
-                    </span>
-                </motion.div>
-
-                {/* Main Heading */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="space-y-4"
-                >
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-                        El Club de la Imaginación
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none">
+                        <span className="block text-white/90">El Club de</span>
+                        <span className="block bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
+                            la Imaginación
+                        </span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-                        Un lugar para sostener el estado con práctica real: biblioteca, comunidad, talleres y acompañamiento inmediato cuando lo necesitás.
-                    </p>
                 </motion.div>
 
-                {/* The 3 Lines Punch */}
-                <motion.div
+                {/* Subtitle */}
+                <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="flex flex-col md:flex-row gap-4 justify-center items-center text-white/50 text-sm md:text-base"
+                    transition={{ duration: 1, delay: 0.3 }}
+                    className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto font-light"
                 >
-                    <p>No es un curso pasajero.</p>
-                    <span className="hidden md:block text-white/20">•</span>
-                    <p>No es una biblioteca suelta.</p>
-                    <span className="hidden md:block text-white/20">•</span>
-                    <p className="text-white/90 font-medium">Es un camino sostenido.</p>
-                </motion.div>
+                    Un lugar para sostener el estado con práctica real
+                </motion.p>
 
-                {/* CTA Buttons */}
+                {/* CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                    className="flex flex-col sm:flex-row gap-6 justify-center pt-8"
                 >
                     <Link
-                        href="/signup"
-                        className="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-white/90 transition-all flex items-center justify-center gap-2 group shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
-                    >
-                        Empezar Ahora
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                    <Link
                         href="/#planes"
-                        className="px-8 py-4 bg-white/5 text-white border border-white/10 rounded-xl hover:bg-white/10 transition-all font-medium backdrop-blur-sm"
+                        className="group px-10 py-5 bg-white text-black font-medium rounded-full hover:bg-white/90 transition-all flex items-center justify-center gap-3 text-lg"
                     >
-                        Ver planes
+                        Explorar
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                     </Link>
                 </motion.div>
             </div>
