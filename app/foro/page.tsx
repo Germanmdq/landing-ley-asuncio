@@ -73,7 +73,7 @@ export default async function ForoPage() {
                     </div>
                     <div className="flex gap-4 w-full md:w-auto">
                         <Link
-                            href="/login"
+                            href="/login?redirect=/comunidad/nuevo"
                             className="px-4 py-2 bg-white text-black font-bold rounded-xl hover:bg-white/90 transition-all flex items-center gap-2"
                         >
                             <Plus className="w-4 h-4" /> Nuevo Tema

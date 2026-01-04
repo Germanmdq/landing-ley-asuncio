@@ -10,8 +10,9 @@ const menuItems = [
     { label: 'Planes', ariaLabel: 'Ver planes', link: '/#planes' },
     { label: 'Biblioteca', ariaLabel: 'Explorar biblioteca', link: '/blog' },
     { label: 'Foro', ariaLabel: 'Ir al foro', link: '/foro' },
-    { label: 'Dosis Mentales', ariaLabel: 'Suscribirse a Dosis Mentales', link: '/dosis-mentales' },
-    { label: 'Entrar', ariaLabel: 'Iniciar sesión', link: '/login' },
+    { label: 'Tutor IA', ariaLabel: 'Chat con tutor', link: '/tutor' },
+    { label: 'Dosis Mentales', ariaLabel: 'Newsletter semanal', link: '/dosis-mentales' },
+    { label: 'Mi Cuenta', ariaLabel: 'Ir a mi cuenta', link: '/cuenta' },
 ];
 
 const socialItems = [
@@ -43,9 +44,9 @@ export default function Navbar() {
                         <Link className="hover:text-white transition-colors" href="/#planes">Planes</Link>
                         <Link className="hover:text-white transition-colors" href="/blog">Biblioteca</Link>
                         <Link className="hover:text-white transition-colors" href="/foro">Foro</Link>
-                        <Link className="hover:text-white transition-colors" href="/dosis-mentales">Dosis Mentales</Link>
-                        <Link className="px-4 py-2 rounded-xl bg-white text-black font-semibold hover:bg-white/90 transition-colors" href="/login">
-                            Entrar
+                        <Link className="hover:text-white transition-colors" href="/tutor">Tutor IA</Link>
+                        <Link className="px-4 py-2 rounded-xl bg-primary text-black font-semibold hover:bg-primary/90 transition-colors" href="/cuenta">
+                            Mi Cuenta
                         </Link>
                     </nav>
 
