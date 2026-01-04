@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'Artículos, conferencias y enseñanzas de maestros espirituales.',
 };
 
-export const revalidate = 60;
+export const revalidate = 30; // Force fresh deployment
 
 export default async function BibliotecaPage() {
     const supabase = createClient();
