@@ -152,7 +152,7 @@ export default function Navbar() {
                             </Link>
 
                             <Link
-                                href="/comunidad"
+                                href="/foro"
                                 onClick={() => setOpen(false)}
                                 className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
                             >
@@ -203,7 +203,7 @@ export default function Navbar() {
                         <Link className="hover:text-white" href="/#como-funciona">Cómo funciona</Link>
                         <Link className="hover:text-white" href="/#planes">Planes</Link>
                         <Link className="hover:text-white" href="/blog">Biblioteca</Link>
-                        <Link className="hover:text-white" href="/comunidad">Foro</Link>
+                        <Link className="hover:text-white" href="/foro">Foro</Link>
                         <Link className="hover:text-white" href="/dosis-mentales">Dosis Mentales</Link>
                         <Link className="px-4 py-2 rounded-xl bg-white text-black font-semibold" href="/login">
                             Entrar

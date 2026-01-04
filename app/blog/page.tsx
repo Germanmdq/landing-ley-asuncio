@@ -49,7 +49,7 @@ export default async function BibliotecaPage() {
             articulos: articulos.length,
             conferencias: library.length
         };
-    }) || [];
+    }).filter(autor => autor.totalObras > 0) || []; // Solo autores con contenido
 
     return (
         <main className="min-h-screen bg-[#050505] text-white pb-20">
