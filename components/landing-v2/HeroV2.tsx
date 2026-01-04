@@ -5,16 +5,17 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { ArrowRight, Sparkles, Users, BookOpen, MessageCircle } from "lucide-react";
 
-// Load AnimatedBackground only on client
-const AnimatedBackground = dynamic(() => import('@/components/three/AnimatedBackground'), {
+const SpiralAnimation = dynamic(() => import('@/components/ui/SpiralAnimation').then(mod => ({ default: mod.SpiralAnimation })), {
     ssr: false,
 });
 
 export default function HeroV2() {
     return (
         <section className="relative min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden pt-20">
-            {/* 3D Animated Background */}
-            <AnimatedBackground />
+            {/* Spiral Background */}
+            <div className="absolute inset-0 -z-10">
+                <SpiralAnimation />
+            </div>
 
             <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
                 {/* Badges */}
