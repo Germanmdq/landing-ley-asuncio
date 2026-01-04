@@ -42,7 +42,7 @@ export default async function LibraryItemPage({ params }: { params: { id: string
                         <div className="p-3 rounded-lg bg-primary/20 text-primary">
                             <Icon className="w-6 h-6" />
                         </div>
-                        {item.accessTier === 'oro' && (
+                        {item.access_tier === 'oro' && (
                             <span className="text-sm bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full border border-yellow-500/20 flex items-center gap-2">
                                 <Lock className="w-4 h-4" />
                                 Contenido Oro

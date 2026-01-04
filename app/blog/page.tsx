@@ -146,7 +146,7 @@ export default async function BibliotecaPage() {
                                             <div className="p-2 rounded-lg bg-primary/20 text-primary">
                                                 <Icon className="w-5 h-5" />
                                             </div>
-                                            {item.accessTier === 'oro' && (
+                                            {item.access_tier === 'oro' && (
                                                 <span className="ml-auto text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded border border-yellow-500/20">
                                                     Oro
                                                 </span>
