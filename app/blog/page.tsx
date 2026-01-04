@@ -13,14 +13,29 @@ export const revalidate = 60;
 export default async function BibliotecaPage() {
     const supabase = createClient();
 
-    // Get all authors with article counts
+    // Get all authors
     const { data: autores } = await supabase
         .from('autores')
-        .select(`
-            *,
-            articulos(count)
-        `)
+        .select('*')
         .order('nombre');
+
+    // Get all articles to count by author
+    const { data: allArticles } = await supabase
+        .from('articulos')
+        .select('id, autor_id, estado')
+        .eq('estado', 'publicado');
+
+    // Count articles per author
+    const articleCounts = allArticles?.reduce((acc, art) => {
+        acc[art.autor_id] = (acc[art.autor_id] || 0) + 1;
+        return acc;
+    }, {} as Record<string, number>) || {};
+
+    // Combine authors with article counts
+    const autoresWithCounts = autores?.map(autor => ({
+        ...autor,
+        articleCount: articleCounts[autor.id] || 0
+    }));
 
     // Get library items (conferencias, etc)
     const { data: libraryItems } = await supabase
@@ -56,13 +71,13 @@ export default async function BibliotecaPage() {
                         <h2 className="text-2xl font-bold">Autores</h2>
                     </div>
 
-                    {!autores || autores.length === 0 ? (
+                    {!autoresWithCounts || autoresWithCounts.length === 0 ? (
                         <div className="text-center text-white/40 py-12 bg-white/5 rounded-xl border border-white/10 border-dashed">
                             <p>No hay autores disponibles aún.</p>
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {autores.map((autor) => (
+                            {autoresWithCounts.map((autor) => (
                                 <Link
                                     href={`/blog/autor/${autor.slug}`}
                                     key={autor.id}
@@ -85,7 +100,7 @@ export default async function BibliotecaPage() {
                                                 {autor.nombre}
                                             </h3>
                                             <p className="text-sm text-white/40">
-                                                {autor.articulos?.[0]?.count || 0} artículos
+                                                {autor.articleCount} artículos
                                             </p>
                                         </div>
                                     </div>

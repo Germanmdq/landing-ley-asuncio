@@ -7,7 +7,7 @@ interface CategoryCardProps {
         name: string;
         slug: string;
         description: string;
-        thread_count?: number;
+        threadCount?: number;
     }
 }
 
@@ -21,9 +21,9 @@ export default function CategoryCard({ category }: CategoryCardProps) {
                 <h3 className="font-bold text-white group-hover:text-primary transition-colors">
                     {category.name}
                 </h3>
-                {/* <span className="text-xs text-white/40 flex items-center gap-1 bg-white/5 px-2 py-1 rounded-full">
-                    <MessageSquare className="w-3 h-3" /> {category.thread_count || 0}
-                </span> */}
+                <span className="text-xs text-white/40 flex items-center gap-1 bg-white/5 px-2 py-1 rounded-full">
+                    <MessageSquare className="w-3 h-3" /> {category.threadCount || 0}
+                </span>
             </div>
             <p className="text-sm text-white/60 line-clamp-2">
                 {category.description}
