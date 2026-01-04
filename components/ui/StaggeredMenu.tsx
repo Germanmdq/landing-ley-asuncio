@@ -206,7 +206,7 @@ export default function StaggeredMenu({
             {isOpen && (
                 <div
                     ref={overlayRef}
-                    className="fixed inset-0 z-[58] bg-black/50 backdrop-blur-sm"
+                    className="fixed inset-0 z-[58] bg-black/70 backdrop-blur-xl"
                     style={{ opacity: 0 }}
                     onClick={closeMenu}
                 />
@@ -216,11 +216,12 @@ export default function StaggeredMenu({
             {isOpen && (
                 <div
                     ref={menuRef}
-                    className="fixed top-0 bottom-0 z-[59] w-full max-w-md overflow-y-auto"
+                    className="fixed top-0 bottom-0 z-[59] w-full max-w-md overflow-y-auto backdrop-blur-2xl"
                     style={{
                         [position === 'right' ? 'right' : 'left']: 0,
-                        background: `linear-gradient(135deg, ${colors[0]} 0%, ${colors[1]} 100%)`,
+                        background: `linear-gradient(135deg, ${colors[0]}E6 0%, ${colors[1]}E6 100%)`,
                         transform: position === 'right' ? 'translateX(100%)' : 'translateX(-100%)',
+                        boxShadow: '-20px 0 60px rgba(0, 0, 0, 0.5)',
                     }}
                 >
                     <div className="flex flex-col min-h-full p-8 pt-24">
