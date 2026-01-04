@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'Artículos, conferencias y enseñanzas de maestros espirituales.',
 };
 
-export const revalidate = 60;
+export const revalidate = 30; // Force fresh deployment
 
 export default async function BibliotecaPage() {
     const supabase = createClient();
@@ -49,7 +49,7 @@ export default async function BibliotecaPage() {
             articulos: articulos.length,
             conferencias: library.length
         };
-    }).filter(autor => autor.totalObras > 0); // Only show authors with content
+    }).filter(autor => autor.totalObras > 0) || []; // Solo autores con contenido
 
     return (
         <main className="min-h-screen bg-[#050505] text-white pb-20">
@@ -58,17 +58,9 @@ export default async function BibliotecaPage() {
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
                     Biblioteca del Club
                 </h1>
-                <p className="text-white/60 max-w-2xl mx-auto text-lg mb-8">
+                <p className="text-white/60 max-w-2xl mx-auto text-lg">
                     Explora las enseñanzas profundas de Neville Goddard y el material de estudio.
                 </p>
-
-                {/* Chat Demo Button */}
-                <Link
-                    href="/tutor"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-black font-bold rounded-xl hover:bg-primary/90 transition-all"
-                >
-                    💬 Chat con Maestros (Demo)
-                </Link>
             </div>
 
             <div className="max-w-7xl mx-auto px-6 py-12">

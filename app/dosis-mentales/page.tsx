@@ -1,3 +1,8 @@
+'use client';
+
+import Link from 'next/link';
+import { Mail, Zap, Brain, BookOpen, ArrowRight } from 'lucide-react';
+
 export default function DosisMentalesPage() {
   return (
     <div className="min-h-screen bg-[#050505] text-white">
@@ -11,51 +16,45 @@ export default function DosisMentalesPage() {
           </p>
         </div>
 
-        <div className="bg-[#111] border border-white/10 rounded-2xl p-8 md:p-12 mb-8">
-          <h2 className="text-2xl font-bold mb-6">📬 Suscríbete al Newsletter</h2>
-          <p className="text-white/70 mb-8">
+        <div className="bg-gradient-to-br from-primary/20 to-purple-600/20 border border-primary/30 rounded-2xl p-8 md:p-12 mb-8">
+          <div className="flex items-center gap-3 mb-6">
+            <Mail className="w-8 h-8 text-primary" />
+            <h2 className="text-2xl font-bold">Newsletter Exclusivo para Miembros</h2>
+          </div>
+
+          <p className="text-white/70 mb-6 text-lg">
             Recibe cada día una dosis de sabiduría práctica sobre la Ley de la Asunción,
             técnicas de manifestación y reflexiones inspiradoras directamente en tu email.
           </p>
 
-          <form className="space-y-4">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-white/60 mb-2">
-                Nombre
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30"
-                placeholder="Tu nombre"
-              />
-            </div>
+          <div className="bg-black/30 border border-white/10 rounded-xl p-6 mb-6">
+            <h3 className="font-bold mb-4 text-primary">Incluye:</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <Zap className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span>Email diario con ejercicios prácticos de manifestación</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Brain className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span>Técnicas paso a paso de la Ley de la Asunción</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <BookOpen className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span>Enseñanzas exclusivas de Neville Goddard</span>
+              </li>
+            </ul>
+          </div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-white/60 mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30"
-                placeholder="tu@email.com"
-              />
-            </div>
+          <Link
+            href="/#planes"
+            className="flex items-center justify-center gap-2 w-full bg-primary text-black font-bold py-4 px-6 rounded-xl hover:bg-primary/90 transition-all group"
+          >
+            Ver Planes y Suscribirme
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
 
-            <button
-              type="submit"
-              className="w-full bg-white text-black font-bold py-3 px-6 rounded-xl hover:bg-white/90 transition-all"
-            >
-              Suscribirme
-            </button>
-          </form>
-
-          <p className="text-xs text-white/40 mt-4 text-center">
-            Enviaremos un email diario. Puedes cancelar tu suscripción en cualquier momento.
+          <p className="text-sm text-white/40 mt-4 text-center">
+            Disponible en los planes Plata y Oro
           </p>
         </div>
 
