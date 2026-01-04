@@ -67,18 +67,18 @@ export default async function LibraryItemPage({ params }: { params: { id: string
                 {/* Content Area */}
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12">
                     {/* Video */}
-                    {item.type === 'video' && item.url && (
+                    {item.type === 'video' && item.external_link && (
                         <div className="aspect-video bg-black rounded-lg overflow-hidden mb-6">
-                            {item.url.includes('youtube.com') || item.url.includes('youtu.be') ? (
+                            {item.external_link.includes('youtube.com') || item.external_link.includes('youtu.be') ? (
                                 <iframe
-                                    src={item.url.replace('watch?v=', 'embed/')}
+                                    src={item.external_link.replace('watch?v=', 'embed/')}
                                     className="w-full h-full"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
                                 />
                             ) : (
                                 <video
-                                    src={item.url}
+                                    src={item.external_link}
                                     controls
                                     className="w-full h-full"
                                 />
@@ -87,10 +87,10 @@ export default async function LibraryItemPage({ params }: { params: { id: string
                     )}
 
                     {/* Audio */}
-                    {item.type === 'audio' && item.url && (
+                    {item.type === 'audio' && item.external_link && (
                         <div className="mb-6">
                             <audio
-                                src={item.url}
+                                src={item.external_link}
                                 controls
                                 className="w-full"
                             />
@@ -98,10 +98,10 @@ export default async function LibraryItemPage({ params }: { params: { id: string
                     )}
 
                     {/* Book/Article content */}
-                    {item.type === 'book' && item.url && (
+                    {item.type === 'book' && item.external_link && (
                         <div className="text-center">
                             <a
-                                href={item.url}
+                                href={item.external_link}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-black font-bold rounded-xl hover:bg-primary/90 transition-all"
@@ -113,14 +113,14 @@ export default async function LibraryItemPage({ params }: { params: { id: string
                     )}
 
                     {/* If no URL */}
-                    {!item.url && (
+                    {!item.external_link && (
                         <div className="text-center py-12 text-white/40">
                             <p>Este contenido estará disponible próximamente.</p>
                         </div>
                     )}
 
                     {/* Additional info */}
-                    {item.description && item.url && (
+                    {item.description && item.external_link && (
                         <div className="mt-8 pt-8 border-t border-white/10">
                             <h3 className="font-bold mb-3">Acerca de este contenido</h3>
                             <p className="text-white/70 leading-relaxed">
