@@ -2,186 +2,25 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
-import { createPortal } from "react-dom";
+import StaggeredMenu from "./StaggeredMenu";
 
-function Portal({ children }: { children: React.ReactNode }) {
-    const [mounted, setMounted] = useState(false);
+const menuItems = [
+    { label: 'Inicio', ariaLabel: 'Ir al inicio', link: '/' },
+    { label: 'Cómo funciona', ariaLabel: 'Ver cómo funciona', link: '/#como-funciona' },
+    { label: 'Planes', ariaLabel: 'Ver planes', link: '/#planes' },
+    { label: 'Biblioteca', ariaLabel: 'Explorar biblioteca', link: '/blog' },
+    { label: 'Foro', ariaLabel: 'Ir al foro', link: '/foro' },
+    { label: 'Dosis Mentales', ariaLabel: 'Suscribirse a Dosis Mentales', link: '/dosis-mentales' },
+    { label: 'Entrar', ariaLabel: 'Iniciar sesión', link: '/login' },
+];
 
-    useEffect(() => setMounted(true), []);
-    if (!mounted) return null;
-
-    return createPortal(children, document.body);
-}
-
-function IconMenu(props: React.SVGProps<SVGSVGElement>) {
-    return (
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-    );
-}
-
-function IconX(props: React.SVGProps<SVGSVGElement>) {
-    return (
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-    );
-}
+const socialItems = [
+    { label: 'Twitter', link: 'https://twitter.com' },
+    { label: 'Instagram', link: 'https://instagram.com' },
+];
 
 export default function Navbar() {
     const pathname = usePathname();
-    const [open, setOpen] = useState(false);
-
-    const [mounted, setMounted] = useState(false);
-    useEffect(() => setMounted(true), []);
-
-
-    // iOS-friendly scroll lock (overflow:hidden solo a veces NO alcanza)
-    useEffect(() => {
-        if (!open) return;
-
-        const scrollY = window.scrollY;
-
-        document.body.style.position = "fixed";
-        document.body.style.top = `-${scrollY}px`;
-        document.body.style.left = "0";
-        document.body.style.right = "0";
-        document.body.style.width = "100%";
-
-        const onKeyDown = (e: KeyboardEvent) => {
-            if (e.key === "Escape") setOpen(false);
-        };
-        window.addEventListener("keydown", onKeyDown);
-
-        return () => {
-            window.removeEventListener("keydown", onKeyDown);
-
-            const top = document.body.style.top;
-            document.body.style.position = "";
-            document.body.style.top = "";
-            document.body.style.left = "";
-            document.body.style.right = "";
-            document.body.style.width = "";
-
-            const y = top ? Math.abs(parseInt(top, 10)) : 0;
-            window.scrollTo(0, y || scrollY);
-        };
-    }, [open]);
-
-    const mobileMenu = useMemo(() => {
-        if (!open) return null;
-
-        return (
-            <Portal>
-                {/* TODO el menú vive en ESTA capa fixed. No hay “partes” abajo y arriba. */}
-                <div className="md:hidden fixed inset-0 z-[2147483647]">
-                    {/* Overlay */}
-                    <div
-                        className="absolute inset-0 bg-black/70"
-                        onClick={() => setOpen(false)}
-                    />
-
-                    {/* Drawer */}
-                    <aside
-                        className={`
-              absolute top-0 right-0 h-[100dvh] w-[85vw] max-w-[360px]
-              bg-[#0a0a0a] border-l border-white/10
-              shadow-2xl
-              translate-x-0
-            `}
-                        style={{
-                            paddingTop: "env(safe-area-inset-top)",
-                            paddingBottom: "env(safe-area-inset-bottom)",
-                        }}
-                    >
-                        {/* Header */}
-                        <div className="h-16 px-4 flex items-center justify-between border-b border-white/10">
-                            <span className="text-white/90 font-semibold text-lg">Menú</span>
-                            <button
-                                type="button"
-                                onClick={() => setOpen(false)}
-                                className="h-10 w-10 inline-flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white/80"
-                                aria-label="Cerrar menú"
-                            >
-                                <IconX className="h-5 w-5" />
-                            </button>
-                        </div>
-
-                        {/* Links */}
-                        <nav className="px-4 py-5 space-y-2">
-                            <Link
-                                href="/tutor"
-                                onClick={() => setOpen(false)}
-                                className="block px-4 py-3 rounded-xl bg-primary text-black font-bold text-center"
-                            >
-                                Mi Escritorio
-                            </Link>
-
-                            <Link
-                                href="/"
-                                onClick={() => setOpen(false)}
-                                className="block px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/90"
-                            >
-                                Inicio
-                            </Link>
-
-                            <Link
-                                href="/#como-funciona"
-                                onClick={() => setOpen(false)}
-                                className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
-                            >
-                                Cómo funciona
-                            </Link>
-
-                            <Link
-                                href="/#planes"
-                                onClick={() => setOpen(false)}
-                                className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
-                            >
-                                Planes
-                            </Link>
-
-                            <Link
-                                href="/blog"
-                                onClick={() => setOpen(false)}
-                                className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
-                            >
-                                Biblioteca
-                            </Link>
-
-                            <Link
-                                href="/foro"
-                                onClick={() => setOpen(false)}
-                                className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
-                            >
-                                Foro
-                            </Link>
-
-                            <Link
-                                href="/dosis-mentales"
-                                onClick={() => setOpen(false)}
-                                className="block px-4 py-3 rounded-xl hover:bg-white/5 text-white/80"
-                            >
-                                Dosis Mentales
-                            </Link>
-
-                            <div className="pt-4 mt-4 border-t border-white/10 space-y-2">
-                                <Link
-                                    href="/login"
-                                    onClick={() => setOpen(false)}
-                                    className="block px-4 py-3 rounded-xl bg-white text-black font-semibold text-center"
-                                >
-                                    Entrar
-                                </Link>
-                            </div>
-                        </nav>
-                    </aside>
-                </div>
-            </Portal>
-        );
-    }, [open]);
 
     // Don't show Navbar on dashboard or admin pages
     const isDashboard = pathname?.includes('dashboard') || pathname?.includes('admin') || pathname?.includes('tutor');
@@ -200,33 +39,36 @@ export default function Navbar() {
 
                     {/* Desktop */}
                     <nav className="hidden md:flex items-center gap-6 text-white/70">
-                        <Link className="hover:text-white" href="/#como-funciona">Cómo funciona</Link>
-                        <Link className="hover:text-white" href="/#planes">Planes</Link>
-                        <Link className="hover:text-white" href="/blog">Biblioteca</Link>
-                        <Link className="hover:text-white" href="/foro">Foro</Link>
-                        <Link className="hover:text-white" href="/dosis-mentales">Dosis Mentales</Link>
-                        <Link className="px-4 py-2 rounded-xl bg-white text-black font-semibold" href="/login">
+                        <Link className="hover:text-white transition-colors" href="/#como-funciona">Cómo funciona</Link>
+                        <Link className="hover:text-white transition-colors" href="/#planes">Planes</Link>
+                        <Link className="hover:text-white transition-colors" href="/blog">Biblioteca</Link>
+                        <Link className="hover:text-white transition-colors" href="/foro">Foro</Link>
+                        <Link className="hover:text-white transition-colors" href="/dosis-mentales">Dosis Mentales</Link>
+                        <Link className="px-4 py-2 rounded-xl bg-white text-black font-semibold hover:bg-white/90 transition-colors" href="/login">
                             Entrar
                         </Link>
                     </nav>
 
-                    {/* Mobile button */}
-                    <button
-                        type="button"
-                        onClick={() => setOpen(true)}
-                        className="md:hidden h-10 w-10 inline-flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white/90"
-                        aria-label="Abrir menú"
-                    >
-                        <IconMenu className="h-6 w-6" />
-                    </button>
+                    {/* Mobile - Staggered Menu */}
+                    <div className="md:hidden">
+                        <StaggeredMenu
+                            position="right"
+                            items={menuItems}
+                            socialItems={socialItems}
+                            displaySocials={true}
+                            displayItemNumbering={true}
+                            menuButtonColor="#fff"
+                            openMenuButtonColor="#fff"
+                            changeMenuColorOnOpen={true}
+                            colors={['#7c3aed', '#5b21b6']}
+                            accentColor="#a78bfa"
+                        />
+                    </div>
                 </div>
             </header>
 
             {/* Spacer para que el contenido no quede debajo del navbar fixed */}
             <div className="h-16" />
-
-            {/* Mobile menu portal */}
-            {mobileMenu}
         </>
     );
 }
