@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { User, CreditCard, MessageSquare, BookOpen, LogOut, Video } from 'lucide-react';
 
 export default function CuentaPage() {
-    const { user, loading, signOut } = useAuth();
+    const { user, loading, logout } = useAuth();
     const router = useRouter();
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function CuentaPage() {
     if (!user) return null;
 
     const handleSignOut = async () => {
-        await signOut();
+        await logout();
         router.push('/');
     };
 
