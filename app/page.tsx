@@ -15,6 +15,7 @@ import { LusionMenu } from "@/components/ui/LusionMenu";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import RevealText from "@/components/animations/RevealText";
+import ProjectsSection from "@/components/lusion/ProjectsSection";
 
 export default function HomePage() {
     // Activar scroll suave
@@ -44,6 +45,9 @@ export default function HomePage() {
                         </div>
                     </div>
                 </section>
+
+                {/* Sección de proyectos con scroll horizontal estilo Lusion */}
+                <ProjectsSection />
 
                 <PillarsSection />
                 <CommunityPreview />

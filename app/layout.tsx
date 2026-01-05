@@ -8,10 +8,6 @@ export const metadata: Metadata = {
 };
 
 
-// ... (imports)
-
-import Navbar from "@/components/ui/Navbar";
-
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -24,7 +20,7 @@ export default function RootLayout({
                     {/* isolate = mezcla controlada + pila más predecible */}
                     <div className="relative isolate flex min-h-screen flex-col overflow-x-clip">
 
-                        {/* Noise Overlay: tiene que ser “atmósfera”, no “techo” */}
+                        {/* Noise Overlay: tiene que ser "atmósfera", no "techo" */}
                         <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.03] mix-blend-overlay">
                             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <filter id="noiseFilter">
@@ -39,10 +35,7 @@ export default function RootLayout({
                             </svg>
                         </div>
 
-                        {/* Navbar arriba del contenido */}
-                        <div className="relative z-40">
-                            <Navbar />
-                        </div>
+                        {/* Navbar removed - LusionMenu now handles navigation */}
 
                         {/* Importante: NO le pongas z-index al main */}
                         <main className="relative flex-1">
