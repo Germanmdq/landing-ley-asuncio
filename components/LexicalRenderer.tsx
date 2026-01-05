@@ -46,7 +46,7 @@ function RenderNode({ node }: { node: LexicalNode }) {
 
     switch (node.type) {
         case 'heading':
-            const HeadingTag = node.tag as keyof JSX.IntrinsicElements;
+            const HeadingTag = node.tag as keyof Pick<JSX.IntrinsicElements, 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'>;
             return <HeadingTag className="font-bold text-white my-4">{children}</HeadingTag>;
         case 'paragraph':
             return <p className="mb-4 text-gray-300 leading-relaxed">{children}</p>;
