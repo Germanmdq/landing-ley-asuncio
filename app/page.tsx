@@ -1,6 +1,6 @@
 "use client";
 
-import LusionHeroV3 from "@/components/landing-v2/LusionHeroV3";
+import SimpleLusionHero from "@/components/landing-v2/SimpleLusionHero";
 import PillarsSection from "@/components/landing-v2/PillarsSection";
 import CommunityPreview from "@/components/landing-v2/CommunityPreview";
 import BlogPreview from "@/components/landing-v2/BlogPreview";
@@ -30,7 +30,7 @@ export default function HomePage() {
             <LusionMenu />
 
             <main className="min-h-screen bg-[#f5f5f5] text-black selection:bg-purple-200">
-                <LusionHeroV3 />
+                <SimpleLusionHero />
 
                 {/* Sección "Beyond Visions" con RevealText */}
                 <section className="min-h-screen bg-white flex items-center justify-center px-6 md:px-10 py-20">
