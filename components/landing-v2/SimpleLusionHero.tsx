@@ -35,7 +35,7 @@ export default function SimpleLusionHero() {
       scene.add(light);
 
       // Simple floating spheres
-      const spheres: THREE.Mesh[] = [];
+      const spheres: any[] = [];
       const geo = new THREE.SphereGeometry(0.3, 16, 16);
       const mat = new THREE.MeshStandardMaterial({ color: 0x8b5cf6, metalness: 0.5, roughness: 0.3 });
 
